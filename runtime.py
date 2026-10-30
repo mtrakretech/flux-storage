@@ -26,8 +26,10 @@ def find_running(directory=None,timeout=1):
         with opener.open(url+'/api/health',timeout=timeout) as response:
             result=json.load(response)
         if not isinstance(result,dict):return None
-        if result.get('app')!=PRODUCT_NAME or result.get('instance_id')!=record.get('instance_id') or not result.get('is_admin'):
+        if result.get('app')!=PRODUCT_NAME or result.get('instance_id')!=record.get('instance_id'):
             return None
+        # Any healthy instance recorded for this user's data directory counts,
+        # regardless of elevation: a per-user install may run without admin.
         return {**record,'url':url}
     except (OSError,ValueError,KeyError,TypeError):
         return None

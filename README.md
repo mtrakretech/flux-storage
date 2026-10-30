@@ -55,6 +55,15 @@ Critical OS/installed-app/runtime locations, volume roots and linked or incomple
 
 ## Get started
 
+### Pre-built preview (unsigned, from the Releases page)
+
+Installers are preview builds — reviewed on the development machine and clean CI runners, still pending the full clean-machine compatibility matrix. **SmartScreen will show "Windows protected your PC"** because MTR Soft has not yet purchased a code-signing certificate; choose *More info → Run anyway* only after comparing the file with the published SHA-256 sums.
+
+- **`FluxStorage-…-setup.exe`** — custom MTR Soft setup: license page, explicit destination selection (default: your `%LOCALAPPDATA%\Programs\Flux Storage`, no UAC for a per-user install; a machine-wide admin install is offered by the dialog when run elevated), Start-menu and optional desktop shortcuts, and an uninstaller that **keeps your `%LOCALAPPDATA%\FluxStorage` snapshots/history** by default, with an explicit prompt if you want them removed.
+- **`FluxStorage-…-windows-x64-portable.zip`** — no install: extract anywhere and run `FluxStorage.exe`. Per-user state still lives in `%LOCALAPPDATA%\FluxStorage`; "portable binaries" does not mean portable data.
+
+Not yet shipped: signed builds, an MSI package, and hardware-compatibility claims. See [docs/RELEASES.md](docs/RELEASES.md) for what is validated and what is not.
+
 ### Source checkout · Windows 10/11 x64
 
 Requirements: **Python 3.12+**, **Bun 1.4.2+** for the UI build, a supported browser, and Windows administrator approval. Python 3.12–3.14 are the CI targets. Internet access is needed to fetch development dependencies; normal inventory/cleanup runs locally.
@@ -81,7 +90,7 @@ Double-click **`Start Flux Storage.cmd`**, approve UAC and keep the server windo
 .\.venv\Scripts\python.exe launch.py
 ```
 
-If Flask is missing, the source bootstrap offers to create `.venv` and install dependencies **only after you approve**. It does not install Python, Bun or a browser silently. Future packages are intended to bundle the runtime; they are not available in this stage.
+If Flask is missing, the source bootstrap offers to create `.venv` and install dependencies **only after you approve**. It does not install Python, Bun or a browser silently; the packaged EXE/ZIP builds on the Releases page ship their own runtime.
 
 ### Your first scan
 

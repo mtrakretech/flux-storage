@@ -55,6 +55,18 @@ class PortabilityTests(unittest.TestCase):
                 self.assertIsNone(find_running(folder))
         finally:server.shutdown();thread.join();server.server_close()
 
+    def test_runtime_identity_without_elevation(self):
+        app=Flask(__name__)
+        @app.get('/api/health')
+        def health():return {'app':'Flux Storage','instance_id':'fixture','is_admin':False}
+        server=bind_server(app)
+        thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
+        try:
+            with tempfile.TemporaryDirectory() as folder:
+                write_record(folder,server.server_port,'fixture')
+                self.assertEqual(find_running(folder)['port'],server.server_port)
+        finally:server.shutdown();thread.join();server.server_close()
+
     @unittest.skipUnless(os.name=='nt','Windows mutex')
     def test_mutex_existing_and_release(self):
         with tempfile.TemporaryDirectory() as folder:
