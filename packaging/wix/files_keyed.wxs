@@ -1,0 +1,787 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="INSTALLFOLDER">
+            <Component Id="FluxStorage.exe" Guid="D8B860C6-01B7-4FBF-B2E4-7776A7F4C24E">
+                <File Id="FluxStorage.exe" Source="$(var.SourceDir)\FluxStorage.exe" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="FluxStorage.exe" Type="integer" Value="1" KeyPath="yes" />
+            <RemoveFolder Id="RF_FluxStorage.exe" Directory="INSTALLFOLDER" On="uninstall" />
+            </Component>
+            <Directory Id="_internal" Name="_internal">
+                <Component Id="api_ms_win_core_console_l1_1_0.dll" Guid="99ED332E-41B0-43F3-AF9F-BB916A2B9904">
+                    <File Id="api_ms_win_core_console_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-core-console-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_core_console_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_core_console_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_core_datetime_l1_1_0.dll" Guid="C40F99A5-B18F-41D6-854F-88866C0A5509">
+                    <File Id="api_ms_win_core_datetime_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-core-datetime-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_core_datetime_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_core_datetime_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_core_debug_l1_1_0.dll" Guid="A7A109D2-F501-4DF4-860D-986C292B7F14">
+                    <File Id="api_ms_win_core_debug_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-core-debug-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_core_debug_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_core_debug_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_core_errorhandling_l1_1_0.dll" Guid="680CB1D1-63DD-4958-AFBD-0C13E975E83D">
+                    <File Id="api_ms_win_core_errorhandling_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-core-errorhandling-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_core_errorhandling_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_core_errorhandling_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_core_fibers_l1_1_0.dll" Guid="52863AC6-3D5F-4FD4-860E-93A305E4F3A0">
+                    <File Id="api_ms_win_core_fibers_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-core-fibers-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_core_fibers_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_core_fibers_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_core_file_l1_1_0.dll" Guid="624771FA-AB5D-4D3A-B1FC-16D07CC688FE">
+                    <File Id="api_ms_win_core_file_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-core-file-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_core_file_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_core_file_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_core_file_l1_2_0.dll" Guid="7BB94D51-6174-4A01-A3B1-64F3BE44C1F3">
+                    <File Id="api_ms_win_core_file_l1_2_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-core-file-l1-2-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_core_file_l1_2_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_core_file_l1_2_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_core_file_l2_1_0.dll" Guid="98690F22-5BAD-4448-B8D3-DF76C93E0A60">
+                    <File Id="api_ms_win_core_file_l2_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-core-file-l2-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_core_file_l2_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_core_file_l2_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_core_handle_l1_1_0.dll" Guid="C73CC746-B07B-46BE-A104-C1895129AFCA">
+                    <File Id="api_ms_win_core_handle_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-core-handle-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_core_handle_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_core_handle_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_core_heap_l1_1_0.dll" Guid="3DEFFF72-5E2C-4CA0-B4EB-9092610B6214">
+                    <File Id="api_ms_win_core_heap_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-core-heap-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_core_heap_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_core_heap_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_core_interlocked_l1_1_0.dll" Guid="2D1948A4-1817-47C1-8F83-BED98A20207C">
+                    <File Id="api_ms_win_core_interlocked_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-core-interlocked-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_core_interlocked_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_core_interlocked_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_core_libraryloader_l1_1_0.dll" Guid="4B9EAC6B-5CB8-4D5C-83B3-F17B94C9415B">
+                    <File Id="api_ms_win_core_libraryloader_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-core-libraryloader-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_core_libraryloader_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_core_libraryloader_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_core_localization_l1_2_0.dll" Guid="5437ECB8-300B-4BC3-90B7-1D4E6F03E6F7">
+                    <File Id="api_ms_win_core_localization_l1_2_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-core-localization-l1-2-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_core_localization_l1_2_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_core_localization_l1_2_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_core_memory_l1_1_0.dll" Guid="ABE4AF37-EFA6-44AA-BFD3-D0BFA59F41E5">
+                    <File Id="api_ms_win_core_memory_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-core-memory-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_core_memory_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_core_memory_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_core_namedpipe_l1_1_0.dll" Guid="C7D16740-916C-4EAB-B911-1C63DF472F92">
+                    <File Id="api_ms_win_core_namedpipe_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-core-namedpipe-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_core_namedpipe_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_core_namedpipe_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_core_processenvironment_l1_1_0.dll" Guid="1F8E3AD3-A15B-4188-A4F4-A6EA32474019">
+                    <File Id="api_ms_win_core_processenvironment_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-core-processenvironment-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_core_processenvironment_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_core_processenvironment_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_core_processthreads_l1_1_0.dll" Guid="B3F7B75E-3EEE-4D85-8553-2F3770F20584">
+                    <File Id="api_ms_win_core_processthreads_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-core-processthreads-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_core_processthreads_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_core_processthreads_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_core_processthreads_l1_1_1.dll" Guid="A5179177-276F-4939-BB8D-261004741386">
+                    <File Id="api_ms_win_core_processthreads_l1_1_1.dll" Source="$(var.SourceDir)\_internal\api-ms-win-core-processthreads-l1-1-1.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_core_processthreads_l1_1_1.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_core_processthreads_l1_1_1.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_core_profile_l1_1_0.dll" Guid="4FF72219-3941-4363-8383-83CAA9E5A277">
+                    <File Id="api_ms_win_core_profile_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-core-profile-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_core_profile_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_core_profile_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_core_rtlsupport_l1_1_0.dll" Guid="658F3402-07CB-4266-B532-6D97425995B5">
+                    <File Id="api_ms_win_core_rtlsupport_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-core-rtlsupport-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_core_rtlsupport_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_core_rtlsupport_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_core_string_l1_1_0.dll" Guid="032124CF-F606-43AA-B163-E26BED076DC0">
+                    <File Id="api_ms_win_core_string_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-core-string-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_core_string_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_core_string_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_core_synch_l1_1_0.dll" Guid="33485896-3B38-4418-9AE7-052A09426AAC">
+                    <File Id="api_ms_win_core_synch_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-core-synch-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_core_synch_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_core_synch_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_core_synch_l1_2_0.dll" Guid="8F0640B6-394B-4F0E-895C-E98374DBEDCD">
+                    <File Id="api_ms_win_core_synch_l1_2_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-core-synch-l1-2-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_core_synch_l1_2_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_core_synch_l1_2_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_core_sysinfo_l1_1_0.dll" Guid="6EB76B2F-F8CA-4F55-B21F-DBFDDC91096C">
+                    <File Id="api_ms_win_core_sysinfo_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-core-sysinfo-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_core_sysinfo_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_core_sysinfo_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_core_timezone_l1_1_0.dll" Guid="3DCB7EAC-EC83-42F9-940E-70D3ADB6CDF7">
+                    <File Id="api_ms_win_core_timezone_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-core-timezone-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_core_timezone_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_core_timezone_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_core_util_l1_1_0.dll" Guid="3A69F74B-9109-4933-B126-F7473B7F55A5">
+                    <File Id="api_ms_win_core_util_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-core-util-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_core_util_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_core_util_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_crt_conio_l1_1_0.dll" Guid="8C233AEA-632E-40A9-A2F8-9208BE3E769B">
+                    <File Id="api_ms_win_crt_conio_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-crt-conio-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_crt_conio_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_crt_conio_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_crt_convert_l1_1_0.dll" Guid="E8A4BEBC-FBC2-4CDA-928B-2EA02BA1F253">
+                    <File Id="api_ms_win_crt_convert_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-crt-convert-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_crt_convert_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_crt_convert_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_crt_environment_l1_1_0.dll" Guid="C7566897-7356-4F93-92BA-948BB97129D4">
+                    <File Id="api_ms_win_crt_environment_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-crt-environment-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_crt_environment_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_crt_environment_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_crt_filesystem_l1_1_0.dll" Guid="591063B2-7DBB-4FA8-9ED6-0A77FF9DE236">
+                    <File Id="api_ms_win_crt_filesystem_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-crt-filesystem-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_crt_filesystem_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_crt_filesystem_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_crt_heap_l1_1_0.dll" Guid="18DC8433-6314-4C6D-9897-87684BB353B2">
+                    <File Id="api_ms_win_crt_heap_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-crt-heap-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_crt_heap_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_crt_heap_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_crt_locale_l1_1_0.dll" Guid="5D37F5C5-09FD-4EE9-BB15-97AF10D6CB13">
+                    <File Id="api_ms_win_crt_locale_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-crt-locale-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_crt_locale_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_crt_locale_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_crt_math_l1_1_0.dll" Guid="5DED2A10-664F-4BCC-B625-C41DBD20E6F6">
+                    <File Id="api_ms_win_crt_math_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-crt-math-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_crt_math_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_crt_math_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_crt_process_l1_1_0.dll" Guid="BC6F7C7A-3155-4C0C-8800-85F180BABAB2">
+                    <File Id="api_ms_win_crt_process_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-crt-process-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_crt_process_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_crt_process_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_crt_runtime_l1_1_0.dll" Guid="F906D2BE-DA5F-4A1D-9E9A-26106D9679EF">
+                    <File Id="api_ms_win_crt_runtime_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-crt-runtime-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_crt_runtime_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_crt_runtime_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_crt_stdio_l1_1_0.dll" Guid="EF0D4906-27CE-4586-BDD3-A828244A1498">
+                    <File Id="api_ms_win_crt_stdio_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-crt-stdio-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_crt_stdio_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_crt_stdio_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_crt_string_l1_1_0.dll" Guid="E526CABF-2898-4AA1-AD48-F3A4D814F953">
+                    <File Id="api_ms_win_crt_string_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-crt-string-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_crt_string_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_crt_string_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_crt_time_l1_1_0.dll" Guid="6AE05988-8EAE-44B1-8354-1C78E8DA1CDA">
+                    <File Id="api_ms_win_crt_time_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-crt-time-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_crt_time_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_crt_time_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="api_ms_win_crt_utility_l1_1_0.dll" Guid="3C6416D4-3C15-494C-9FC8-BA13E8B03015">
+                    <File Id="api_ms_win_crt_utility_l1_1_0.dll" Source="$(var.SourceDir)\_internal\api-ms-win-crt-utility-l1-1-0.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="api_ms_win_crt_utility_l1_1_0.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_api_ms_win_crt_utility_l1_1_0.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="base_library.zip" Guid="0AC3696D-7E81-4615-A9F4-139FD608C8E1">
+                    <File Id="base_library.zip" Source="$(var.SourceDir)\_internal\base_library.zip" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="base_library.zip" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_base_library.zip" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="libcrypto_3.dll" Guid="EB627631-9B7F-4721-9362-2B20ECE08118">
+                    <File Id="libcrypto_3.dll" Source="$(var.SourceDir)\_internal\libcrypto-3.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="libcrypto_3.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_libcrypto_3.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="libffi_8.dll" Guid="AA26EEE9-B75B-4450-89C0-6AE76747970B">
+                    <File Id="libffi_8.dll" Source="$(var.SourceDir)\_internal\libffi-8.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="libffi_8.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_libffi_8.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="libssl_3.dll" Guid="AD2F08DC-01BD-4ED4-8AC5-F2DC946005BC">
+                    <File Id="libssl_3.dll" Source="$(var.SourceDir)\_internal\libssl-3.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="libssl_3.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_libssl_3.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="LICENSE" Guid="4A4E0DE9-B01E-4A16-BF22-40D93C9CEC78">
+                    <File Id="LICENSE" Source="$(var.SourceDir)\_internal\LICENSE" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="LICENSE" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_LICENSE" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="pyexpat.pyd" Guid="6A0FF5EE-7666-41EC-BD98-FEBD2800C211">
+                    <File Id="pyexpat.pyd" Source="$(var.SourceDir)\_internal\pyexpat.pyd" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="pyexpat.pyd" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_pyexpat.pyd" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="python3.dll" Guid="A2FE81FD-47F7-41CB-BF96-BDF577780CBB">
+                    <File Id="python3.dll" Source="$(var.SourceDir)\_internal\python3.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="python3.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_python3.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="python313.dll" Guid="83C133D0-0486-4353-83C0-D2239806158A">
+                    <File Id="python313.dll" Source="$(var.SourceDir)\_internal\python313.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="python313.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_python313.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="select.pyd" Guid="C50E0E93-5419-4A27-949E-D249F83C30F8">
+                    <File Id="select.pyd" Source="$(var.SourceDir)\_internal\select.pyd" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="select.pyd" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_select.pyd" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="THIRD_PARTY_NOTICES.md" Guid="58EEF894-8ADF-4C7D-A9D8-FEC147B20ED6">
+                    <File Id="THIRD_PARTY_NOTICES.md" Source="$(var.SourceDir)\_internal\THIRD_PARTY_NOTICES.md" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="THIRD_PARTY_NOTICES.md" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_THIRD_PARTY_NOTICES.md" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="ucrtbase.dll" Guid="7C1B9DBD-0898-4D30-86B4-B56987E776AE">
+                    <File Id="ucrtbase.dll" Source="$(var.SourceDir)\_internal\ucrtbase.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="ucrtbase.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_ucrtbase.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="unicodedata.pyd" Guid="9EB5DF59-8766-4DF2-AE58-6C757B09899A">
+                    <File Id="unicodedata.pyd" Source="$(var.SourceDir)\_internal\unicodedata.pyd" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="unicodedata.pyd" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_unicodedata.pyd" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="VCRUNTIME140.dll" Guid="BE102971-6B35-4EE7-BB78-FFE2AE8DC341">
+                    <File Id="VCRUNTIME140.dll" Source="$(var.SourceDir)\_internal\VCRUNTIME140.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="VCRUNTIME140.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_VCRUNTIME140.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="VCRUNTIME140_1.dll" Guid="3C094158-4A3C-4482-B9DE-BAD721F91CB6">
+                    <File Id="VCRUNTIME140_1.dll" Source="$(var.SourceDir)\_internal\VCRUNTIME140_1.dll" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="VCRUNTIME140_1.dll" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF_VCRUNTIME140_1.dll" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="_asyncio.pyd" Guid="A5BFF576-33C7-4706-ACCF-5BFF609CA981">
+                    <File Id="_asyncio.pyd" Source="$(var.SourceDir)\_internal\_asyncio.pyd" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="_asyncio.pyd" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF__asyncio.pyd" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="_bz2.pyd" Guid="1B00D4D7-AE18-4032-A21E-42B44500E84C">
+                    <File Id="_bz2.pyd" Source="$(var.SourceDir)\_internal\_bz2.pyd" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="_bz2.pyd" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF__bz2.pyd" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="_cffi_backend.cp313_win_amd64.pyd" Guid="C5E909C0-237E-410B-BDF5-78193F8725BD">
+                    <File Id="_cffi_backend.cp313_win_amd64.pyd" Source="$(var.SourceDir)\_internal\_cffi_backend.cp313-win_amd64.pyd" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="_cffi_backend.cp313_win_amd64.pyd" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF__cffi_backend.cp313_win_amd64.pyd" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="_ctypes.pyd" Guid="B6B492AB-81D6-405A-8200-DAA05F620257">
+                    <File Id="_ctypes.pyd" Source="$(var.SourceDir)\_internal\_ctypes.pyd" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="_ctypes.pyd" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF__ctypes.pyd" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="_decimal.pyd" Guid="92672A3F-AA6F-4376-A2F1-3AA5E398D544">
+                    <File Id="_decimal.pyd" Source="$(var.SourceDir)\_internal\_decimal.pyd" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="_decimal.pyd" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF__decimal.pyd" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="_hashlib.pyd" Guid="5A86EF01-CCCF-49ED-BC76-7B470BFBE2EB">
+                    <File Id="_hashlib.pyd" Source="$(var.SourceDir)\_internal\_hashlib.pyd" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="_hashlib.pyd" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF__hashlib.pyd" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="_lzma.pyd" Guid="069C2879-B36D-4C81-A5B3-E5D84C4F284E">
+                    <File Id="_lzma.pyd" Source="$(var.SourceDir)\_internal\_lzma.pyd" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="_lzma.pyd" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF__lzma.pyd" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="_multiprocessing.pyd" Guid="CFB171BD-562C-4998-992D-B8E1486AF071">
+                    <File Id="_multiprocessing.pyd" Source="$(var.SourceDir)\_internal\_multiprocessing.pyd" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="_multiprocessing.pyd" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF__multiprocessing.pyd" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="_overlapped.pyd" Guid="F4D323C4-A8E7-42F9-9617-A17051952185">
+                    <File Id="_overlapped.pyd" Source="$(var.SourceDir)\_internal\_overlapped.pyd" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="_overlapped.pyd" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF__overlapped.pyd" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="_queue.pyd" Guid="44D98E8D-A7A5-4AA5-BDEA-FFCA60F67D7D">
+                    <File Id="_queue.pyd" Source="$(var.SourceDir)\_internal\_queue.pyd" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="_queue.pyd" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF__queue.pyd" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="_socket.pyd" Guid="22A14E24-9888-4924-9A0C-078D77653D20">
+                    <File Id="_socket.pyd" Source="$(var.SourceDir)\_internal\_socket.pyd" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="_socket.pyd" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF__socket.pyd" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="_ssl.pyd" Guid="5C49003A-FBB3-4DBB-A7FF-FC9A93836335">
+                    <File Id="_ssl.pyd" Source="$(var.SourceDir)\_internal\_ssl.pyd" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="_ssl.pyd" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF__ssl.pyd" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="_uuid.pyd" Guid="1ABB5B2B-2985-4226-B5D6-3CDD788EFDBA">
+                    <File Id="_uuid.pyd" Source="$(var.SourceDir)\_internal\_uuid.pyd" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="_uuid.pyd" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF__uuid.pyd" Directory="_internal" On="uninstall" />
+                </Component>
+                <Component Id="_wmi.pyd" Guid="888FDAEE-6AE3-413F-9F3C-EB4A4DDBC0E9">
+                    <File Id="_wmi.pyd" Source="$(var.SourceDir)\_internal\_wmi.pyd" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="_wmi.pyd" Type="integer" Value="1" KeyPath="yes" />
+                <RemoveFolder Id="RF__wmi.pyd" Directory="_internal" On="uninstall" />
+                </Component>
+                <Directory Id="bcrypt" Name="bcrypt">
+                    <Component Id="_bcrypt.pyd" Guid="628EDE03-8050-424B-BFF8-7E34942D5928">
+                        <File Id="_bcrypt.pyd" Source="$(var.SourceDir)\_internal\bcrypt\_bcrypt.pyd" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="_bcrypt.pyd" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF__bcrypt.pyd" Directory="bcrypt" On="uninstall" />
+                    </Component>
+                </Directory>
+                <Directory Id="click_8.4.2.dist_info" Name="click-8.4.2.dist-info">
+                    <Component Id="INSTALLER" Guid="0A66CF94-547D-42A9-8C1F-4C0CE3F50D48">
+                        <File Id="INSTALLER" Source="$(var.SourceDir)\_internal\click-8.4.2.dist-info\INSTALLER" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="INSTALLER" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_INSTALLER" Directory="click_8.4.2.dist_info" On="uninstall" />
+                    </Component>
+                    <Component Id="METADATA" Guid="40B33BA6-1BD5-4635-A7E3-A3D0A1521AB1">
+                        <File Id="METADATA" Source="$(var.SourceDir)\_internal\click-8.4.2.dist-info\METADATA" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="METADATA" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_METADATA" Directory="click_8.4.2.dist_info" On="uninstall" />
+                    </Component>
+                    <Component Id="RECORD" Guid="F5AEC801-4EBB-4368-AF2E-319A2CE03E64">
+                        <File Id="RECORD" Source="$(var.SourceDir)\_internal\click-8.4.2.dist-info\RECORD" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="RECORD" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_RECORD" Directory="click_8.4.2.dist_info" On="uninstall" />
+                    </Component>
+                    <Component Id="WHEEL" Guid="4776E00E-6AF5-451D-ADC3-0B515435E3AF">
+                        <File Id="WHEEL" Source="$(var.SourceDir)\_internal\click-8.4.2.dist-info\WHEEL" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="WHEEL" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_WHEEL" Directory="click_8.4.2.dist_info" On="uninstall" />
+                    </Component>
+                    <Directory Id="licenses" Name="licenses">
+                        <Component Id="LICENSE.txt" Guid="3D4FD4CB-559B-4CC7-B29A-AED6662D20B1">
+                            <File Id="LICENSE.txt" Source="$(var.SourceDir)\_internal\click-8.4.2.dist-info\licenses\LICENSE.txt" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="LICENSE.txt" Type="integer" Value="1" KeyPath="yes" />
+                        <RemoveFolder Id="RF_LICENSE.txt" Directory="licenses" On="uninstall" />
+                        </Component>
+                    </Directory>
+                </Directory>
+                <Directory Id="cryptography" Name="cryptography">
+                    <Directory Id="hazmat" Name="hazmat">
+                        <Directory Id="bindings" Name="bindings">
+                            <Component Id="_rust.pyd" Guid="EF1EC3A8-6278-4EEA-A74D-E3D711A38890">
+                                <File Id="_rust.pyd" Source="$(var.SourceDir)\_internal\cryptography\hazmat\bindings\_rust.pyd" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="_rust.pyd" Type="integer" Value="1" KeyPath="yes" />
+                            <RemoveFolder Id="RF__rust.pyd" Directory="bindings" On="uninstall" />
+                            </Component>
+                        </Directory>
+                    </Directory>
+                </Directory>
+                <Directory Id="cryptography_46.0.3.dist_info" Name="cryptography-46.0.3.dist-info">
+                    <Component Id="INSTALLER_1" Guid="48EDAA43-5D41-48E1-8B81-EBE9BD2E1CDB">
+                        <File Id="INSTALLER_1" Source="$(var.SourceDir)\_internal\cryptography-46.0.3.dist-info\INSTALLER" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="INSTALLER_1" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_INSTALLER_1" Directory="cryptography_46.0.3.dist_info" On="uninstall" />
+                    </Component>
+                    <Component Id="METADATA_1" Guid="DA6CA145-9557-4F94-91EA-B90D76E43AF5">
+                        <File Id="METADATA_1" Source="$(var.SourceDir)\_internal\cryptography-46.0.3.dist-info\METADATA" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="METADATA_1" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_METADATA_1" Directory="cryptography_46.0.3.dist_info" On="uninstall" />
+                    </Component>
+                    <Component Id="RECORD_1" Guid="2943C9D2-D529-4912-890B-EF47DA1A57F4">
+                        <File Id="RECORD_1" Source="$(var.SourceDir)\_internal\cryptography-46.0.3.dist-info\RECORD" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="RECORD_1" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_RECORD_1" Directory="cryptography_46.0.3.dist_info" On="uninstall" />
+                    </Component>
+                    <Component Id="WHEEL_1" Guid="A61D5B95-9F8A-40BB-9E30-7805A798E7F4">
+                        <File Id="WHEEL_1" Source="$(var.SourceDir)\_internal\cryptography-46.0.3.dist-info\WHEEL" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="WHEEL_1" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_WHEEL_1" Directory="cryptography_46.0.3.dist_info" On="uninstall" />
+                    </Component>
+                    <Directory Id="licenses_1" Name="licenses">
+                        <Component Id="LICENSE_1" Guid="A7A78941-F2F8-486D-9A9D-9A0521EC1ED7">
+                            <File Id="LICENSE_1" Source="$(var.SourceDir)\_internal\cryptography-46.0.3.dist-info\licenses\LICENSE" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="LICENSE_1" Type="integer" Value="1" KeyPath="yes" />
+                        <RemoveFolder Id="RF_LICENSE_1" Directory="licenses_1" On="uninstall" />
+                        </Component>
+                        <Component Id="LICENSE.APACHE" Guid="1AD12AD0-F869-482B-82D1-F3EB6E165DBD">
+                            <File Id="LICENSE.APACHE" Source="$(var.SourceDir)\_internal\cryptography-46.0.3.dist-info\licenses\LICENSE.APACHE" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="LICENSE.APACHE" Type="integer" Value="1" KeyPath="yes" />
+                        <RemoveFolder Id="RF_LICENSE.APACHE" Directory="licenses_1" On="uninstall" />
+                        </Component>
+                        <Component Id="LICENSE.BSD" Guid="8BB98186-1F82-4779-9FD0-85FCFAE2338A">
+                            <File Id="LICENSE.BSD" Source="$(var.SourceDir)\_internal\cryptography-46.0.3.dist-info\licenses\LICENSE.BSD" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="LICENSE.BSD" Type="integer" Value="1" KeyPath="yes" />
+                        <RemoveFolder Id="RF_LICENSE.BSD" Directory="licenses_1" On="uninstall" />
+                        </Component>
+                    </Directory>
+                </Directory>
+                <Directory Id="flask_3.1.2.dist_info" Name="flask-3.1.2.dist-info">
+                    <Component Id="entry_points.txt" Guid="BE9875EB-6048-4EE9-BD83-9DAE472FEE87">
+                        <File Id="entry_points.txt" Source="$(var.SourceDir)\_internal\flask-3.1.2.dist-info\entry_points.txt" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="entry_points.txt" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_entry_points.txt" Directory="flask_3.1.2.dist_info" On="uninstall" />
+                    </Component>
+                    <Component Id="INSTALLER_2" Guid="EA57C93A-B3F6-4297-B1BE-AE5D5994CFDC">
+                        <File Id="INSTALLER_2" Source="$(var.SourceDir)\_internal\flask-3.1.2.dist-info\INSTALLER" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="INSTALLER_2" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_INSTALLER_2" Directory="flask_3.1.2.dist_info" On="uninstall" />
+                    </Component>
+                    <Component Id="METADATA_2" Guid="E37021A5-8D58-4523-A5B7-39853DBB5122">
+                        <File Id="METADATA_2" Source="$(var.SourceDir)\_internal\flask-3.1.2.dist-info\METADATA" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="METADATA_2" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_METADATA_2" Directory="flask_3.1.2.dist_info" On="uninstall" />
+                    </Component>
+                    <Component Id="RECORD_2" Guid="8738F95B-2E55-4910-8BF4-3A2BF0231C81">
+                        <File Id="RECORD_2" Source="$(var.SourceDir)\_internal\flask-3.1.2.dist-info\RECORD" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="RECORD_2" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_RECORD_2" Directory="flask_3.1.2.dist_info" On="uninstall" />
+                    </Component>
+                    <Component Id="REQUESTED" Guid="24157CA6-DD4E-4446-A242-C10D5D537948">
+                        <File Id="REQUESTED" Source="$(var.SourceDir)\_internal\flask-3.1.2.dist-info\REQUESTED" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="REQUESTED" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_REQUESTED" Directory="flask_3.1.2.dist_info" On="uninstall" />
+                    </Component>
+                    <Component Id="WHEEL_2" Guid="3B13D7A6-DF76-4CFA-997E-6444FCE2B3D7">
+                        <File Id="WHEEL_2" Source="$(var.SourceDir)\_internal\flask-3.1.2.dist-info\WHEEL" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="WHEEL_2" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_WHEEL_2" Directory="flask_3.1.2.dist_info" On="uninstall" />
+                    </Component>
+                    <Directory Id="licenses_2" Name="licenses">
+                        <Component Id="LICENSE.txt_1" Guid="AEC7D945-939B-497E-BB49-2858753E38C7">
+                            <File Id="LICENSE.txt_1" Source="$(var.SourceDir)\_internal\flask-3.1.2.dist-info\licenses\LICENSE.txt" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="LICENSE.txt_1" Type="integer" Value="1" KeyPath="yes" />
+                        <RemoveFolder Id="RF_LICENSE.txt_1" Directory="licenses_2" On="uninstall" />
+                        </Component>
+                    </Directory>
+                </Directory>
+                <Directory Id="importlib_metadata_8.7.1.dist_info" Name="importlib_metadata-8.7.1.dist-info">
+                    <Component Id="INSTALLER_3" Guid="4CF81D63-E836-48E4-A521-D328706ED6C1">
+                        <File Id="INSTALLER_3" Source="$(var.SourceDir)\_internal\importlib_metadata-8.7.1.dist-info\INSTALLER" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="INSTALLER_3" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_INSTALLER_3" Directory="importlib_metadata_8.7.1.dist_info" On="uninstall" />
+                    </Component>
+                    <Component Id="METADATA_3" Guid="D17DF559-F5DA-4281-82B1-10ADCBC5AFBB">
+                        <File Id="METADATA_3" Source="$(var.SourceDir)\_internal\importlib_metadata-8.7.1.dist-info\METADATA" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="METADATA_3" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_METADATA_3" Directory="importlib_metadata_8.7.1.dist_info" On="uninstall" />
+                    </Component>
+                    <Component Id="RECORD_3" Guid="B1D0B859-0424-4722-80E4-37FE31E70281">
+                        <File Id="RECORD_3" Source="$(var.SourceDir)\_internal\importlib_metadata-8.7.1.dist-info\RECORD" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="RECORD_3" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_RECORD_3" Directory="importlib_metadata_8.7.1.dist_info" On="uninstall" />
+                    </Component>
+                    <Component Id="top_level.txt" Guid="E2554782-A1BA-4FD5-A34A-DC694E466EA1">
+                        <File Id="top_level.txt" Source="$(var.SourceDir)\_internal\importlib_metadata-8.7.1.dist-info\top_level.txt" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="top_level.txt" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_top_level.txt" Directory="importlib_metadata_8.7.1.dist_info" On="uninstall" />
+                    </Component>
+                    <Component Id="WHEEL_3" Guid="D393A4AA-A544-4DE7-B621-99CB7705D572">
+                        <File Id="WHEEL_3" Source="$(var.SourceDir)\_internal\importlib_metadata-8.7.1.dist-info\WHEEL" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="WHEEL_3" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_WHEEL_3" Directory="importlib_metadata_8.7.1.dist_info" On="uninstall" />
+                    </Component>
+                    <Directory Id="licenses_3" Name="licenses">
+                        <Component Id="LICENSE_2" Guid="997AC6D2-FEC4-4C93-92F7-CA00D95DC05D">
+                            <File Id="LICENSE_2" Source="$(var.SourceDir)\_internal\importlib_metadata-8.7.1.dist-info\licenses\LICENSE" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="LICENSE_2" Type="integer" Value="1" KeyPath="yes" />
+                        <RemoveFolder Id="RF_LICENSE_2" Directory="licenses_3" On="uninstall" />
+                        </Component>
+                    </Directory>
+                </Directory>
+                <Directory Id="itsdangerous_2.2.0.dist_info" Name="itsdangerous-2.2.0.dist-info">
+                    <Component Id="INSTALLER_4" Guid="19159C57-8E46-4647-9B35-48E84A16DF15">
+                        <File Id="INSTALLER_4" Source="$(var.SourceDir)\_internal\itsdangerous-2.2.0.dist-info\INSTALLER" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="INSTALLER_4" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_INSTALLER_4" Directory="itsdangerous_2.2.0.dist_info" On="uninstall" />
+                    </Component>
+                    <Component Id="LICENSE.txt_2" Guid="6F564339-6E3E-4292-9D8A-3B131F0B80CC">
+                        <File Id="LICENSE.txt_2" Source="$(var.SourceDir)\_internal\itsdangerous-2.2.0.dist-info\LICENSE.txt" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="LICENSE.txt_2" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_LICENSE.txt_2" Directory="itsdangerous_2.2.0.dist_info" On="uninstall" />
+                    </Component>
+                    <Component Id="METADATA_4" Guid="F9ACE691-7F88-40DD-A8AF-071E9C9303C5">
+                        <File Id="METADATA_4" Source="$(var.SourceDir)\_internal\itsdangerous-2.2.0.dist-info\METADATA" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="METADATA_4" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_METADATA_4" Directory="itsdangerous_2.2.0.dist_info" On="uninstall" />
+                    </Component>
+                    <Component Id="RECORD_4" Guid="9C51FE79-D26B-4830-9049-673C0A233C94">
+                        <File Id="RECORD_4" Source="$(var.SourceDir)\_internal\itsdangerous-2.2.0.dist-info\RECORD" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="RECORD_4" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_RECORD_4" Directory="itsdangerous_2.2.0.dist_info" On="uninstall" />
+                    </Component>
+                    <Component Id="WHEEL_4" Guid="AB5E74C1-ECC2-4A6D-8FD8-BD371D26FDB3">
+                        <File Id="WHEEL_4" Source="$(var.SourceDir)\_internal\itsdangerous-2.2.0.dist-info\WHEEL" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="WHEEL_4" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_WHEEL_4" Directory="itsdangerous_2.2.0.dist_info" On="uninstall" />
+                    </Component>
+                </Directory>
+                <Directory Id="markupsafe" Name="markupsafe">
+                    <Component Id="_speedups.cp313_win_amd64.pyd" Guid="99090D8E-D735-4EA3-A158-E3F949D43DEB">
+                        <File Id="_speedups.cp313_win_amd64.pyd" Source="$(var.SourceDir)\_internal\markupsafe\_speedups.cp313-win_amd64.pyd" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="_speedups.cp313_win_amd64.pyd" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF__speedups.cp313_win_amd64.pyd" Directory="markupsafe" On="uninstall" />
+                    </Component>
+                </Directory>
+                <Directory Id="markupsafe_3.0.3.dist_info" Name="markupsafe-3.0.3.dist-info">
+                    <Component Id="INSTALLER_5" Guid="35939EC6-AA91-409B-9583-0A75A1F70E8D">
+                        <File Id="INSTALLER_5" Source="$(var.SourceDir)\_internal\markupsafe-3.0.3.dist-info\INSTALLER" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="INSTALLER_5" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_INSTALLER_5" Directory="markupsafe_3.0.3.dist_info" On="uninstall" />
+                    </Component>
+                    <Component Id="METADATA_5" Guid="31D5DE4D-C4F4-4FA1-9D38-604CA8340919">
+                        <File Id="METADATA_5" Source="$(var.SourceDir)\_internal\markupsafe-3.0.3.dist-info\METADATA" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="METADATA_5" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_METADATA_5" Directory="markupsafe_3.0.3.dist_info" On="uninstall" />
+                    </Component>
+                    <Component Id="RECORD_5" Guid="9144E697-C30D-4A4B-9640-D6A20EC6EBC0">
+                        <File Id="RECORD_5" Source="$(var.SourceDir)\_internal\markupsafe-3.0.3.dist-info\RECORD" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="RECORD_5" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_RECORD_5" Directory="markupsafe_3.0.3.dist_info" On="uninstall" />
+                    </Component>
+                    <Component Id="top_level.txt_1" Guid="5DB8DCC6-B929-4342-A6A5-F37D656EB866">
+                        <File Id="top_level.txt_1" Source="$(var.SourceDir)\_internal\markupsafe-3.0.3.dist-info\top_level.txt" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="top_level.txt_1" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_top_level.txt_1" Directory="markupsafe_3.0.3.dist_info" On="uninstall" />
+                    </Component>
+                    <Component Id="WHEEL_5" Guid="411B7CDF-944F-4798-B7B4-F3D9FD419EF1">
+                        <File Id="WHEEL_5" Source="$(var.SourceDir)\_internal\markupsafe-3.0.3.dist-info\WHEEL" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="WHEEL_5" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_WHEEL_5" Directory="markupsafe_3.0.3.dist_info" On="uninstall" />
+                    </Component>
+                    <Directory Id="licenses_4" Name="licenses">
+                        <Component Id="LICENSE.txt_3" Guid="1A7AE8EE-1680-4AB0-85A2-9EAD9FD47F97">
+                            <File Id="LICENSE.txt_3" Source="$(var.SourceDir)\_internal\markupsafe-3.0.3.dist-info\licenses\LICENSE.txt" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="LICENSE.txt_3" Type="integer" Value="1" KeyPath="yes" />
+                        <RemoveFolder Id="RF_LICENSE.txt_3" Directory="licenses_4" On="uninstall" />
+                        </Component>
+                    </Directory>
+                </Directory>
+                <Directory Id="notices" Name="notices">
+                    <Component Id="THIRD_PARTY_NOTICES.md_1" Guid="E21358C0-162B-4978-9CB3-6AD9C029B3E1">
+                        <File Id="THIRD_PARTY_NOTICES.md_1" Source="$(var.SourceDir)\_internal\notices\THIRD-PARTY-NOTICES.md" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="THIRD_PARTY_NOTICES.md_1" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_THIRD_PARTY_NOTICES.md_1" Directory="notices" On="uninstall" />
+                    </Component>
+                </Directory>
+                <Directory Id="static" Name="static">
+                    <Directory Id="ui" Name="ui">
+                        <Component Id="favicon.svg" Guid="B7C1FDBC-7B66-423D-B176-0A7860FE79F3">
+                            <File Id="favicon.svg" Source="$(var.SourceDir)\_internal\static\ui\favicon.svg" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="favicon.svg" Type="integer" Value="1" KeyPath="yes" />
+                        <RemoveFolder Id="RF_favicon.svg" Directory="ui" On="uninstall" />
+                        </Component>
+                        <Component Id="index.html" Guid="3536D23D-266A-438E-8E0F-8062213BDE2F">
+                            <File Id="index.html" Source="$(var.SourceDir)\_internal\static\ui\index.html" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="index.html" Type="integer" Value="1" KeyPath="yes" />
+                        <RemoveFolder Id="RF_index.html" Directory="ui" On="uninstall" />
+                        </Component>
+                        <Directory Id="assets" Name="assets">
+                            <Component Id="index_BhY_LeBv.js" Guid="ADD442DB-0775-4749-8DA0-4D6D9BAD2CD6">
+                                <File Id="index_BhY_LeBv.js" Source="$(var.SourceDir)\_internal\static\ui\assets\index-BhY-LeBv.js" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="index_BhY_LeBv.js" Type="integer" Value="1" KeyPath="yes" />
+                            <RemoveFolder Id="RF_index_BhY_LeBv.js" Directory="assets" On="uninstall" />
+                            </Component>
+                            <Component Id="index_Tul5SCGi.css" Guid="AF21A5EC-C241-4610-9F8C-E2B2689CF49B">
+                                <File Id="index_Tul5SCGi.css" Source="$(var.SourceDir)\_internal\static\ui\assets\index-Tul5SCGi.css" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="index_Tul5SCGi.css" Type="integer" Value="1" KeyPath="yes" />
+                            <RemoveFolder Id="RF_index_Tul5SCGi.css" Directory="assets" On="uninstall" />
+                            </Component>
+                        </Directory>
+                    </Directory>
+                </Directory>
+                <Directory Id="werkzeug_3.1.3.dist_info" Name="werkzeug-3.1.3.dist-info">
+                    <Component Id="INSTALLER_6" Guid="80D26D70-74D3-4BE3-ACBA-93C6DF1BA87D">
+                        <File Id="INSTALLER_6" Source="$(var.SourceDir)\_internal\werkzeug-3.1.3.dist-info\INSTALLER" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="INSTALLER_6" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_INSTALLER_6" Directory="werkzeug_3.1.3.dist_info" On="uninstall" />
+                    </Component>
+                    <Component Id="LICENSE.txt_4" Guid="42EF948F-F59E-4824-9471-391554F1D43A">
+                        <File Id="LICENSE.txt_4" Source="$(var.SourceDir)\_internal\werkzeug-3.1.3.dist-info\LICENSE.txt" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="LICENSE.txt_4" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_LICENSE.txt_4" Directory="werkzeug_3.1.3.dist_info" On="uninstall" />
+                    </Component>
+                    <Component Id="METADATA_6" Guid="6A103337-596D-4C22-BDDC-C848C7ECA1A1">
+                        <File Id="METADATA_6" Source="$(var.SourceDir)\_internal\werkzeug-3.1.3.dist-info\METADATA" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="METADATA_6" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_METADATA_6" Directory="werkzeug_3.1.3.dist_info" On="uninstall" />
+                    </Component>
+                    <Component Id="RECORD_6" Guid="56BCB01D-5A16-4639-AB61-1ED37B6915AE">
+                        <File Id="RECORD_6" Source="$(var.SourceDir)\_internal\werkzeug-3.1.3.dist-info\RECORD" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="RECORD_6" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_RECORD_6" Directory="werkzeug_3.1.3.dist_info" On="uninstall" />
+                    </Component>
+                    <Component Id="WHEEL_6" Guid="53D97045-F20E-4F55-890D-3253F5C672DA">
+                        <File Id="WHEEL_6" Source="$(var.SourceDir)\_internal\werkzeug-3.1.3.dist-info\WHEEL" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="WHEEL_6" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_WHEEL_6" Directory="werkzeug_3.1.3.dist_info" On="uninstall" />
+                    </Component>
+                </Directory>
+                <Directory Id="windows" Name="windows">
+                    <Component Id="BrowserSetup.ps1" Guid="381F465D-88EB-494D-9B59-999374E1CB10">
+                        <File Id="BrowserSetup.ps1" Source="$(var.SourceDir)\_internal\windows\BrowserSetup.ps1" />
+                    <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="BrowserSetup.ps1" Type="integer" Value="1" KeyPath="yes" />
+                    <RemoveFolder Id="RF_BrowserSetup.ps1" Directory="windows" On="uninstall" />
+                    </Component>
+                </Directory>
+            </Directory>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="FluxComponents">
+            <ComponentRef Id="FluxStorage.exe" />
+            <ComponentRef Id="api_ms_win_core_console_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_core_datetime_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_core_debug_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_core_errorhandling_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_core_fibers_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_core_file_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_core_file_l1_2_0.dll" />
+            <ComponentRef Id="api_ms_win_core_file_l2_1_0.dll" />
+            <ComponentRef Id="api_ms_win_core_handle_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_core_heap_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_core_interlocked_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_core_libraryloader_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_core_localization_l1_2_0.dll" />
+            <ComponentRef Id="api_ms_win_core_memory_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_core_namedpipe_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_core_processenvironment_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_core_processthreads_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_core_processthreads_l1_1_1.dll" />
+            <ComponentRef Id="api_ms_win_core_profile_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_core_rtlsupport_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_core_string_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_core_synch_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_core_synch_l1_2_0.dll" />
+            <ComponentRef Id="api_ms_win_core_sysinfo_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_core_timezone_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_core_util_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_crt_conio_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_crt_convert_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_crt_environment_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_crt_filesystem_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_crt_heap_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_crt_locale_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_crt_math_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_crt_process_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_crt_runtime_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_crt_stdio_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_crt_string_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_crt_time_l1_1_0.dll" />
+            <ComponentRef Id="api_ms_win_crt_utility_l1_1_0.dll" />
+            <ComponentRef Id="base_library.zip" />
+            <ComponentRef Id="libcrypto_3.dll" />
+            <ComponentRef Id="libffi_8.dll" />
+            <ComponentRef Id="libssl_3.dll" />
+            <ComponentRef Id="LICENSE" />
+            <ComponentRef Id="pyexpat.pyd" />
+            <ComponentRef Id="python3.dll" />
+            <ComponentRef Id="python313.dll" />
+            <ComponentRef Id="select.pyd" />
+            <ComponentRef Id="THIRD_PARTY_NOTICES.md" />
+            <ComponentRef Id="ucrtbase.dll" />
+            <ComponentRef Id="unicodedata.pyd" />
+            <ComponentRef Id="VCRUNTIME140.dll" />
+            <ComponentRef Id="VCRUNTIME140_1.dll" />
+            <ComponentRef Id="_asyncio.pyd" />
+            <ComponentRef Id="_bz2.pyd" />
+            <ComponentRef Id="_cffi_backend.cp313_win_amd64.pyd" />
+            <ComponentRef Id="_ctypes.pyd" />
+            <ComponentRef Id="_decimal.pyd" />
+            <ComponentRef Id="_hashlib.pyd" />
+            <ComponentRef Id="_lzma.pyd" />
+            <ComponentRef Id="_multiprocessing.pyd" />
+            <ComponentRef Id="_overlapped.pyd" />
+            <ComponentRef Id="_queue.pyd" />
+            <ComponentRef Id="_socket.pyd" />
+            <ComponentRef Id="_ssl.pyd" />
+            <ComponentRef Id="_uuid.pyd" />
+            <ComponentRef Id="_wmi.pyd" />
+            <ComponentRef Id="_bcrypt.pyd" />
+            <ComponentRef Id="INSTALLER" />
+            <ComponentRef Id="METADATA" />
+            <ComponentRef Id="RECORD" />
+            <ComponentRef Id="WHEEL" />
+            <ComponentRef Id="LICENSE.txt" />
+            <ComponentRef Id="_rust.pyd" />
+            <ComponentRef Id="INSTALLER_1" />
+            <ComponentRef Id="METADATA_1" />
+            <ComponentRef Id="RECORD_1" />
+            <ComponentRef Id="WHEEL_1" />
+            <ComponentRef Id="LICENSE_1" />
+            <ComponentRef Id="LICENSE.APACHE" />
+            <ComponentRef Id="LICENSE.BSD" />
+            <ComponentRef Id="entry_points.txt" />
+            <ComponentRef Id="INSTALLER_2" />
+            <ComponentRef Id="METADATA_2" />
+            <ComponentRef Id="RECORD_2" />
+            <ComponentRef Id="REQUESTED" />
+            <ComponentRef Id="WHEEL_2" />
+            <ComponentRef Id="LICENSE.txt_1" />
+            <ComponentRef Id="INSTALLER_3" />
+            <ComponentRef Id="METADATA_3" />
+            <ComponentRef Id="RECORD_3" />
+            <ComponentRef Id="top_level.txt" />
+            <ComponentRef Id="WHEEL_3" />
+            <ComponentRef Id="LICENSE_2" />
+            <ComponentRef Id="INSTALLER_4" />
+            <ComponentRef Id="LICENSE.txt_2" />
+            <ComponentRef Id="METADATA_4" />
+            <ComponentRef Id="RECORD_4" />
+            <ComponentRef Id="WHEEL_4" />
+            <ComponentRef Id="_speedups.cp313_win_amd64.pyd" />
+            <ComponentRef Id="INSTALLER_5" />
+            <ComponentRef Id="METADATA_5" />
+            <ComponentRef Id="RECORD_5" />
+            <ComponentRef Id="top_level.txt_1" />
+            <ComponentRef Id="WHEEL_5" />
+            <ComponentRef Id="LICENSE.txt_3" />
+            <ComponentRef Id="THIRD_PARTY_NOTICES.md_1" />
+            <ComponentRef Id="favicon.svg" />
+            <ComponentRef Id="index.html" />
+            <ComponentRef Id="index_BhY_LeBv.js" />
+            <ComponentRef Id="index_Tul5SCGi.css" />
+            <ComponentRef Id="INSTALLER_6" />
+            <ComponentRef Id="LICENSE.txt_4" />
+            <ComponentRef Id="METADATA_6" />
+            <ComponentRef Id="RECORD_6" />
+            <ComponentRef Id="WHEEL_6" />
+            <ComponentRef Id="BrowserSetup.ps1" />
+        </ComponentGroup>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="INSTALLFOLDER">
+            <Component Id="RemoveDir_cryptography" Guid="137D4FD2-5A20-5BB3-9B52-074134F19FE4">
+                <RemoveFolder Id="RFDIR_cryptography" Directory="cryptography" On="uninstall" />
+                <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="rmdir_cryptography" Type="integer" Value="1" KeyPath="yes" />
+            </Component>
+            <Component Id="RemoveDir_hazmat" Guid="786B9090-C668-5D04-8FD3-EB0F31059016">
+                <RemoveFolder Id="RFDIR_hazmat" Directory="hazmat" On="uninstall" />
+                <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="rmdir_hazmat" Type="integer" Value="1" KeyPath="yes" />
+            </Component>
+            <Component Id="RemoveDir_static" Guid="FE4B26F0-8DC1-550B-BADB-6DE356D82B53">
+                <RemoveFolder Id="RFDIR_static" Directory="static" On="uninstall" />
+                <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage\components" Name="rmdir_static" Type="integer" Value="1" KeyPath="yes" />
+            </Component>
+        </DirectoryRef>
+
+        <ComponentGroup Id="RemoveDirsGroup">
+      <ComponentRef Id="RemoveDir_cryptography" />
+      <ComponentRef Id="RemoveDir_hazmat" />
+      <ComponentRef Id="RemoveDir_static" />
+        </ComponentGroup>
+    </Fragment>
+</Wix>

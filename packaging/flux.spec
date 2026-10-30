@@ -1,4 +1,6 @@
-# Draft build preparation only. No MSI/custom-setup or signing is implied.
+# PyInstaller one-directory application payload used by the unsigned preview
+# EXE, Inno Setup installer, portable ZIP, and experimental WiX MSI candidate.
+# This spec does not sign artifacts or establish MSI installation context.
 from pathlib import Path
 
 root = Path(SPECPATH).parent

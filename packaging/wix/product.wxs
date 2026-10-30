@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Flux Storage (MTR Soft) per-user MSI - WiX Toolset v3 preview.
+     Per-user scope only at this stage: no UAC, %LOCALAPPDATA% target,
+     uninstall does not touch %LOCALAPPDATA%\FluxStorage (user data must be
+     removed explicitly and separately, mirroring the Inno setup). -->
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product
+    Id="*"
+    Name="Flux Storage (MTR Soft)"
+    Language="1033"
+    Version="2.2.0"
+    Manufacturer="MTR Soft"
+    UpgradeCode="136E0E7C-CDB1-4FD8-8738-5C7D100937BF">
+
+    <Package
+      InstallerVersion="500"
+      Compressed="yes"
+      InstallScope="perUser"
+      Platform="x64"
+      Description="Local drive inventory and cleanup by MTR Soft"
+      Manufacturer="MTR Soft"
+      Comments="Flux Storage keeps state in %LOCALAPPDATA%\FluxStorage; uninstalling does not remove it." />
+
+    <MajorUpgrade
+      Schedule="afterInstallValidate"
+      AllowSameVersionUpgrades="yes"
+      DowngradeErrorMessage="A newer version of Flux Storage ([ProductVersion]) is already installed. Remove it first or install the matching version." />
+
+    <MediaTemplate EmbedCab="yes" />
+    <!-- Per-user package. ALLUSERS is left unset; standard-account testing
+         confirmed USERUNMANAGED without elevation. The HKLM uninstall metadata
+         behavior observed during testing is documented in the release notes. -->
+    <Property Id="ALLUSERS" Secure="yes" />
+    <Condition Message="Flux Storage installs per user only. Do not set the ALLUSERS property; run the installer normally (no admin rights needed).">
+      NOT ALLUSERS
+    </Condition>
+    <Property Id="ARPPRODUCTICON" Value="FluxIcon" />
+    <Icon Id="FluxIcon" SourceFile="$(var.PackagingDir)\flux.ico" />
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+    <Property Id="WixUILicenseRtf" Value="$(var.PackagingDir)\license.rtf" />
+    <!-- Preserve a custom destination for MSI repair/uninstall as well as ARP. -->
+    <Property Id="INSTALLFOLDER" Secure="yes">
+      <RegistrySearch Id="PreviousInstallFolder" Root="HKCU"
+        Key="Software\MTR Soft\Flux Storage" Name="InstallLocation" Type="raw" />
+    </Property>
+
+    <UIRef Id="WixUI_InstallDir" />
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="LocalAppDataFolder">
+        <Directory Id="ProgramsFluxFolder" Name="Programs">
+          <Directory Id="INSTALLFOLDER" Name="Flux Storage" />
+        </Directory>
+      </Directory>
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="FluxProgramMenuFolder" Name="Flux Storage">
+          <Component Id="StartMenuShortcut" Guid="9A14AF1C-1C1B-4F3A-8D16-4DB4AC8F4268">
+            <Shortcut
+              Id="FluxStartShortcut"
+              Name="Flux Storage"
+              Description="Flux Storage by MTR Soft - local drive inventory and cleanup"
+              Target="[INSTALLFOLDER]FluxStorage.exe"
+              WorkingDirectory="INSTALLFOLDER"
+              Icon="FluxIcon" />
+            <RemoveFolder Id="RemoveFluxProgramMenuFolder" Directory="FluxProgramMenuFolder" On="uninstall" />
+            <RemoveFolder Id="RemoveFluxInstallFolder" Directory="INSTALLFOLDER" On="uninstall" />
+            <RemoveFolder Id="RemoveFluxProgramsFolder" Directory="ProgramsFluxFolder" On="uninstall" />
+            <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage"
+              Name="startmenu_shortcut" Type="integer" Value="1" KeyPath="yes" />
+            <RegistryValue Root="HKCU" Key="Software\MTR Soft\Flux Storage"
+              Name="InstallLocation" Type="string" Value="[INSTALLFOLDER]" />
+          </Component>
+        </Directory>
+      </Directory>
+    </Directory>
+
+    <Feature Id="FluxCore" Title="Flux Storage" Description="Flux Storage application files" Level="1" Absent="disallow">
+      <ComponentGroupRef Id="FluxComponents" />
+      <ComponentGroupRef Id="RemoveDirsGroup" />
+      <ComponentRef Id="StartMenuShortcut" />
+    </Feature>
+  </Product>
+</Wix>
