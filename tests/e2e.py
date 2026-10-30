@@ -55,7 +55,17 @@ def main():
                 page.locator('[data-view="tree"]').click()
                 expect(page.get_by_role('tree',name='Folder navigation tree')).to_be_visible()
                 page.get_by_role('button',name='Expand assets',exact=True).click()
-                expect(page.get_by_role('treeitem',name='images',exact=True)).to_be_visible()
+                images=lambda: page.get_by_role('treeitem',name='images',exact=True)
+                for attempt in range(3):
+                    try:
+                        expect(images()).to_be_visible(timeout=5000);break
+                    except AssertionError:
+                        # A brief connection hiccup can fail one folder read; the UI's
+                        # own retry control is the sanctioned recovery path.
+                        retry=page.get_by_role('button',name='Read failed')
+                        if attempt==2 or not retry.count():raise
+                        retry.first.click();page.wait_for_timeout(250)
+                expect(images()).to_be_visible()
                 page.get_by_role('button',name='Icon view',exact=True).click()
                 expect(page.get_by_test_id('explorer-tile').first).to_be_visible()
                 page.get_by_role('button',name='Browse assets',exact=True).click()

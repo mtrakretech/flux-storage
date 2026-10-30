@@ -13,6 +13,7 @@ import shutil
 import subprocess
 import threading
 import time
+import traceback
 import webbrowser
 import stat
 from pathlib import Path
@@ -380,6 +381,11 @@ def create_app(state=None, port=0):
 
     @app.errorhandler(500)
     def unexpected_error(exc):
+        traceback.print_exc()
+        try:
+            state.log({'kind':'error','status':'error','error':str(exc)})
+        except OSError:
+            pass
         return jsonify(error='An unexpected error occurred. No successful completion is assumed. Check Activity and restart Flux if needed.'),500
 
     def json_body():

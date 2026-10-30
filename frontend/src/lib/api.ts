@@ -11,7 +11,7 @@ export type Preview = { ticket:string; expires:number; bytes:number; mode:Mode; 
 export type Activity = { at:number; kind:string; [key:string]:unknown }
 
 const token = () => document.querySelector<HTMLMetaElement>('meta[name="flux-token"]')?.content || ''
-export async function api<T>(url:string,data?:unknown,signal?:AbortSignal):Promise<T> {
+const call = async <T,>(url:string,data?:unknown,signal?:AbortSignal):Promise<T> => {
   const response = await fetch(url, {signal:signal||AbortSignal.timeout(120000), ...(data===undefined?{}:{method:'POST',headers:{'Content-Type':'application/json','X-Flux-Token':token()},body:JSON.stringify(data)})})
   if(response.status===403)throw new Error('This local session changed or is not authorized. Refresh the page (Ctrl+F5), then try again.')
   const type=response.headers.get('content-type')||''
@@ -19,6 +19,18 @@ export async function api<T>(url:string,data?:unknown,signal?:AbortSignal):Promi
   const payload=await response.json()
   if(!response.ok) throw new Error(payload.error||`Request failed (${response.status}).`)
   return payload
+}
+export async function api<T>(url:string,data?:unknown,signal?:AbortSignal):Promise<T> {
+  // Read-only requests are the app's own localhost server; one dropped or reset
+  // connection (a common brief hiccup) is retried once instead of showing an error.
+  if(data===undefined){
+    try{return await call<T>(url,data,signal)}
+    catch(error){
+      if(error instanceof TypeError){await new Promise(r=>setTimeout(r,200));return call<T>(url,data,signal)}
+      throw error
+    }
+  }
+  return call<T>(url,data,signal)
 }
 export const bytes=(n?:number) => {
   if(n===undefined||!Number.isFinite(n))return '—'

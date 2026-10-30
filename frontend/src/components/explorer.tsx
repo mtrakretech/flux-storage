@@ -201,8 +201,12 @@ export function FolderTree({
           <div role="group">
             {branch?.rows.map((child) => node(child, depth + 1))}
             {errors[row.id] && (
-              <button className="tree-error" onClick={() => load(row.id)}>
-                Read failed · Retry
+              <button
+                className="tree-error"
+                onClick={() => load(row.id)}
+                title={errors[row.id] || "Read failed"}
+              >
+                Read failed · {errors[row.id] || "please retry"} · Retry
               </button>
             )}
             {branch && branch.rows.length < branch.total && (
@@ -242,8 +246,8 @@ export function FolderTree({
         ) : (
           <div className="p-4 text-xs text-muted-foreground">
             {errors[""] ? (
-              <button onClick={() => load()}>
-                Could not load tree · Retry
+              <button onClick={() => load()} title={errors[""]}>
+                Could not load tree · {errors[""] || "please retry"} · Retry
               </button>
             ) : (
               <LoaderCircle className="size-4 animate-spin" />

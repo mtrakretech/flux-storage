@@ -9,6 +9,7 @@
 - Source bootstrap with consent-based local dependency setup.
 - Portability regression tests, fixture-only browser tests and Windows CI.
 - Draft bundled-runtime build preparation; EXE/MSI/portable releases are not yet shipped.
+- Read-only API requests retry once on a dropped loopback connection; tree read failures state the actual reason next to Retry and unexpected server errors are logged for diagnosis.
 
 ## Earlier local development
 
