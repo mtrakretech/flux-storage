@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.2.0 — stable-channel release (unsigned)
+
+- Version metadata updated to 2.2.0 across the app, UI and Windows installer.
+- Corrected bundled legal notices: include the Python 3.13.14 license bundle and exclude the unused bcrypt extension.
+- Setup EXE and portable ZIP rebuilt and published; MSI rebuilt but not installation-tested, as requested.
+- 44 unit tests, fixture-only browser end-to-end and CI on Python 3.12–3.14 passed.
+- Still unsigned; fresh-machine/Windows 11 and representative hardware matrix not completed.
+
 ## 2.2.0-dev.1 — source preview
 
 - MTR Soft identity and public-safe documentation/artwork.

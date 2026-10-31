@@ -1,6 +1,6 @@
 # Release artifact component inventory
 
-This inventory covers the `2.2.0-dev.1` Windows x64 payload and its resolved application dependencies. It does not claim clean-machine or hardware validation.
+This inventory covers the `2.2.0` Windows x64 payload and its resolved application dependencies. It does not claim clean-machine or hardware validation.
 
 ## Shared application payload
 
@@ -17,17 +17,17 @@ The Python runtime dependency declaration is `requirements.txt` (`Flask>=3.1,<4`
 
 | Artifact | Added packaging components | Install/data behavior |
 |---|---|---|
-| `FluxStorage-2.2.0-dev.1-setup.exe` | Inno Setup 6 wizard, MIT license page, destination/shortcut tasks, uninstaller | Per-user default; uninstall removes installed program files and shortcuts. `%LOCALAPPDATA%\FluxStorage` is retained unless the user explicitly chooses the purge prompt. |
-| `FluxStorage-2.2.0-dev.1-per-user.msi` | WiX 3 Windows Installer package, license UI, destination selection, Start-menu shortcut | Published MSI remains the earlier tested build and does not contain the corrected Python runtime license packaging. Corrected MSI candidate built locally but explicitly not tested or published. Earlier build was tested as per-user unmanaged under a standard account; see MSI validation notes. |
-| `FluxStorage-2.2.0-dev.1-windows-x64-portable.zip` | ZIP wrapper containing the one-directory application tree | No installer or uninstaller. User state remains in `%LOCALAPPDATA%\FluxStorage`, not beside the extracted binaries. |
+| `FluxStorage-2.2.0-setup.exe` | Inno Setup 6 wizard, MIT license page, destination/shortcut tasks, uninstaller | Per-user default; uninstall removes installed program files and shortcuts. `%LOCALAPPDATA%\FluxStorage` is retained unless the user explicitly chooses the purge prompt. |
+| `FluxStorage-2.2.0-per-user.msi` | WiX 3 Windows Installer package, license UI, destination selection, Start-menu shortcut | Packaged but not installation-tested for v2.2.0, per user request. The prior dev MSI's per-user context and HKLM metadata behavior are documented below but do not constitute validation of this MSI build. |
+| `FluxStorage-2.2.0-windows-x64-portable.zip` | ZIP wrapper containing the one-directory application tree | No installer or uninstaller. User state remains in `%LOCALAPPDATA%\FluxStorage`, not beside the extracted binaries. |
 
 Both published files are unsigned preview builds. The release SHA-256 manifest identifies the exact uploaded artifacts.
 
 ## MSI validation notes
 
-`dist/setup/FluxStorage-2.2.0-dev.1-per-user.msi` is built with WiX 3 and passes ICE38/ICE64 using HKCU component keypaths and explicit directory-removal components. A genuine non-admin local account installed it without elevation; Windows Installer's `MsiEnumProductsEx` reported `USERUNMANAGED`. The install was verified at the default and a custom destination; uninstall removed the custom program tree and preserved a sentinel under the test account's `%LOCALAPPDATA%\FluxStorage`.
+The earlier `2.2.0-dev.1` MSI was built with WiX 3 and passed ICE38/ICE64 using HKCU component keypaths and explicit directory-removal components. A genuine non-admin local account installed it without elevation; Windows Installer's `MsiEnumProductsEx` reported `USERUNMANAGED`. The install was verified at the default and a custom destination; uninstall removed the custom program tree and preserved a sentinel under the test account's `%LOCALAPPDATA%\FluxStorage`. The v2.2.0 MSI was rebuilt from corrected payload but was not installed or tested.
 
-During the standard-user test, Windows Installer also created an HKLM uninstall metadata entry; the per-user context API still reported `USERUNMANAGED`, and uninstall removed the entry. The MSI does not remove `%LOCALAPPDATA%\FluxStorage`. App launch separately requests administrator approval for protected operations; a standard account without admin credentials cannot complete that UAC flow. `packaging/wix_keypaths.py` transforms the `heat.exe` harvest into per-user keypaths and directory-removal entries; regenerate `files_keyed.wxs` from `files.wxs` when the harvested payload changes.
+During that earlier test, Windows Installer also created an HKLM uninstall metadata entry; the per-user context API still reported `USERUNMANAGED`, and uninstall removed the entry. The MSI does not remove `%LOCALAPPDATA%\FluxStorage`. App launch separately requests administrator approval for protected operations; a standard account without admin credentials cannot complete that UAC flow. `packaging/wix_keypaths.py` transforms the `heat.exe` harvest into per-user keypaths and directory-removal entries; regenerate `files_keyed.wxs` from `files.wxs` when the harvested payload changes.
 
 ## Remaining audit work
 

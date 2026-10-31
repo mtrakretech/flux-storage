@@ -5,7 +5,7 @@
 
 #define ProductName "Flux Storage"
 #define Publisher "MTR Soft"
-#define AppVersion "2.2.0-dev.1"
+#define AppVersion "2.2.0"
 #define ExeName "FluxStorage"
 #define AppId "654C1AF9-D7DF-45FD-BBAA-34BB40A552E4"
 
