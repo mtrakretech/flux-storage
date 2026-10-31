@@ -21,7 +21,7 @@
 
 **Flux Storage** is a local-first Windows storage explorer by **MTR Soft**. It combines a responsive browser interface, an expandable folder tree, clear cleanup classifications and an exact deletion manifest—without uploading your inventory to a service.
 
-> **Unsigned development preview.** Current version: `2.2.0-dev.1`. The Releases page provides a custom setup EXE and portable ZIP. An MSI is not yet published; clean-machine compatibility, signing and broad hardware support are not claimed.
+> **Unsigned development preview.** Current version: `2.2.0-dev.1`. The Releases page provides a custom setup EXE, per-user MSI and portable ZIP. The setup and portable files include the corrected Python runtime license payload; the MSI remains the earlier build because MSI install testing was explicitly skipped. Clean-machine compatibility, signing and broad hardware support are not claimed.
 
 ## A clearer view of your PC
 
@@ -60,7 +60,7 @@ Critical OS/installed-app/runtime locations, volume roots and linked or incomple
 Installers are preview builds — reviewed on the development machine and clean CI runners, still pending the full clean-machine compatibility matrix. **SmartScreen will show "Windows protected your PC"** because MTR Soft has not yet purchased a code-signing certificate; choose *More info → Run anyway* only after comparing the file with the published SHA-256 sums.
 
 - **`FluxStorage-…-setup.exe`** — custom MTR Soft setup: license page, explicit destination selection (default: your `%LOCALAPPDATA%\Programs\Flux Storage`, no UAC for a per-user install; a machine-wide admin install is offered by the dialog when run elevated), Start-menu and optional desktop shortcuts, and an uninstaller that **keeps your `%LOCALAPPDATA%\FluxStorage` snapshots/history** by default, with an explicit prompt if you want them removed.
-- **`FluxStorage-…-per-user.msi`** — standard Windows Installer package. Its per-user unmanaged install was tested under a standard Windows account without elevation, including a custom destination and uninstall preserving user data. The app itself still requires administrator approval for its protected operations.
+- **`FluxStorage-…-per-user.msi`** — standard Windows Installer package. The published MSI is unchanged from the previously tested build; it does not contain the latest runtime-license packaging correction. The corrected MSI candidate was built but not tested or published.
 - **`FluxStorage-…-windows-x64-portable.zip`** — no install: extract anywhere and run `FluxStorage.exe`. Per-user state still lives in `%LOCALAPPDATA%\FluxStorage`; "portable binaries" does not mean portable data.
 
 Not yet shipped: signed builds. No broad hardware-compatibility claim is made. See [docs/RELEASES.md](docs/RELEASES.md) and the [artifact component inventory](docs/ARTIFACT_INVENTORY.md) for validation status and packaging contents.

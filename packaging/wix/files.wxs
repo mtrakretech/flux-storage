@@ -2,402 +2,400 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
     <Fragment>
         <DirectoryRef Id="INSTALLFOLDER">
-            <Component Id="FluxStorage.exe" Guid="D8B860C6-01B7-4FBF-B2E4-7776A7F4C24E">
+            <Component Id="FluxStorage.exe" Guid="PUT-GUID-HERE">
                 <File Id="FluxStorage.exe" KeyPath="yes" Source="$(var.SourceDir)\FluxStorage.exe" />
             </Component>
             <Directory Id="_internal" Name="_internal">
-                <Component Id="api_ms_win_core_console_l1_1_0.dll" Guid="99ED332E-41B0-43F3-AF9F-BB916A2B9904">
+                <Component Id="api_ms_win_core_console_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_core_console_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-core-console-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_core_datetime_l1_1_0.dll" Guid="C40F99A5-B18F-41D6-854F-88866C0A5509">
+                <Component Id="api_ms_win_core_datetime_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_core_datetime_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-core-datetime-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_core_debug_l1_1_0.dll" Guid="A7A109D2-F501-4DF4-860D-986C292B7F14">
+                <Component Id="api_ms_win_core_debug_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_core_debug_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-core-debug-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_core_errorhandling_l1_1_0.dll" Guid="680CB1D1-63DD-4958-AFBD-0C13E975E83D">
+                <Component Id="api_ms_win_core_errorhandling_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_core_errorhandling_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-core-errorhandling-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_core_fibers_l1_1_0.dll" Guid="52863AC6-3D5F-4FD4-860E-93A305E4F3A0">
+                <Component Id="api_ms_win_core_fibers_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_core_fibers_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-core-fibers-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_core_file_l1_1_0.dll" Guid="624771FA-AB5D-4D3A-B1FC-16D07CC688FE">
+                <Component Id="api_ms_win_core_file_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_core_file_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-core-file-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_core_file_l1_2_0.dll" Guid="7BB94D51-6174-4A01-A3B1-64F3BE44C1F3">
+                <Component Id="api_ms_win_core_file_l1_2_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_core_file_l1_2_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-core-file-l1-2-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_core_file_l2_1_0.dll" Guid="98690F22-5BAD-4448-B8D3-DF76C93E0A60">
+                <Component Id="api_ms_win_core_file_l2_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_core_file_l2_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-core-file-l2-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_core_handle_l1_1_0.dll" Guid="C73CC746-B07B-46BE-A104-C1895129AFCA">
+                <Component Id="api_ms_win_core_handle_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_core_handle_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-core-handle-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_core_heap_l1_1_0.dll" Guid="3DEFFF72-5E2C-4CA0-B4EB-9092610B6214">
+                <Component Id="api_ms_win_core_heap_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_core_heap_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-core-heap-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_core_interlocked_l1_1_0.dll" Guid="2D1948A4-1817-47C1-8F83-BED98A20207C">
+                <Component Id="api_ms_win_core_interlocked_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_core_interlocked_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-core-interlocked-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_core_libraryloader_l1_1_0.dll" Guid="4B9EAC6B-5CB8-4D5C-83B3-F17B94C9415B">
+                <Component Id="api_ms_win_core_libraryloader_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_core_libraryloader_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-core-libraryloader-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_core_localization_l1_2_0.dll" Guid="5437ECB8-300B-4BC3-90B7-1D4E6F03E6F7">
+                <Component Id="api_ms_win_core_localization_l1_2_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_core_localization_l1_2_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-core-localization-l1-2-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_core_memory_l1_1_0.dll" Guid="ABE4AF37-EFA6-44AA-BFD3-D0BFA59F41E5">
+                <Component Id="api_ms_win_core_memory_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_core_memory_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-core-memory-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_core_namedpipe_l1_1_0.dll" Guid="C7D16740-916C-4EAB-B911-1C63DF472F92">
+                <Component Id="api_ms_win_core_namedpipe_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_core_namedpipe_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-core-namedpipe-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_core_processenvironment_l1_1_0.dll" Guid="1F8E3AD3-A15B-4188-A4F4-A6EA32474019">
+                <Component Id="api_ms_win_core_processenvironment_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_core_processenvironment_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-core-processenvironment-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_core_processthreads_l1_1_0.dll" Guid="B3F7B75E-3EEE-4D85-8553-2F3770F20584">
+                <Component Id="api_ms_win_core_processthreads_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_core_processthreads_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-core-processthreads-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_core_processthreads_l1_1_1.dll" Guid="A5179177-276F-4939-BB8D-261004741386">
+                <Component Id="api_ms_win_core_processthreads_l1_1_1.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_core_processthreads_l1_1_1.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-core-processthreads-l1-1-1.dll" />
                 </Component>
-                <Component Id="api_ms_win_core_profile_l1_1_0.dll" Guid="4FF72219-3941-4363-8383-83CAA9E5A277">
+                <Component Id="api_ms_win_core_profile_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_core_profile_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-core-profile-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_core_rtlsupport_l1_1_0.dll" Guid="658F3402-07CB-4266-B532-6D97425995B5">
+                <Component Id="api_ms_win_core_rtlsupport_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_core_rtlsupport_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-core-rtlsupport-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_core_string_l1_1_0.dll" Guid="032124CF-F606-43AA-B163-E26BED076DC0">
+                <Component Id="api_ms_win_core_string_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_core_string_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-core-string-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_core_synch_l1_1_0.dll" Guid="33485896-3B38-4418-9AE7-052A09426AAC">
+                <Component Id="api_ms_win_core_synch_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_core_synch_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-core-synch-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_core_synch_l1_2_0.dll" Guid="8F0640B6-394B-4F0E-895C-E98374DBEDCD">
+                <Component Id="api_ms_win_core_synch_l1_2_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_core_synch_l1_2_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-core-synch-l1-2-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_core_sysinfo_l1_1_0.dll" Guid="6EB76B2F-F8CA-4F55-B21F-DBFDDC91096C">
+                <Component Id="api_ms_win_core_sysinfo_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_core_sysinfo_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-core-sysinfo-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_core_timezone_l1_1_0.dll" Guid="3DCB7EAC-EC83-42F9-940E-70D3ADB6CDF7">
+                <Component Id="api_ms_win_core_timezone_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_core_timezone_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-core-timezone-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_core_util_l1_1_0.dll" Guid="3A69F74B-9109-4933-B126-F7473B7F55A5">
+                <Component Id="api_ms_win_core_util_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_core_util_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-core-util-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_crt_conio_l1_1_0.dll" Guid="8C233AEA-632E-40A9-A2F8-9208BE3E769B">
+                <Component Id="api_ms_win_crt_conio_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_crt_conio_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-crt-conio-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_crt_convert_l1_1_0.dll" Guid="E8A4BEBC-FBC2-4CDA-928B-2EA02BA1F253">
+                <Component Id="api_ms_win_crt_convert_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_crt_convert_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-crt-convert-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_crt_environment_l1_1_0.dll" Guid="C7566897-7356-4F93-92BA-948BB97129D4">
+                <Component Id="api_ms_win_crt_environment_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_crt_environment_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-crt-environment-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_crt_filesystem_l1_1_0.dll" Guid="591063B2-7DBB-4FA8-9ED6-0A77FF9DE236">
+                <Component Id="api_ms_win_crt_filesystem_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_crt_filesystem_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-crt-filesystem-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_crt_heap_l1_1_0.dll" Guid="18DC8433-6314-4C6D-9897-87684BB353B2">
+                <Component Id="api_ms_win_crt_heap_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_crt_heap_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-crt-heap-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_crt_locale_l1_1_0.dll" Guid="5D37F5C5-09FD-4EE9-BB15-97AF10D6CB13">
+                <Component Id="api_ms_win_crt_locale_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_crt_locale_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-crt-locale-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_crt_math_l1_1_0.dll" Guid="5DED2A10-664F-4BCC-B625-C41DBD20E6F6">
+                <Component Id="api_ms_win_crt_math_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_crt_math_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-crt-math-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_crt_process_l1_1_0.dll" Guid="BC6F7C7A-3155-4C0C-8800-85F180BABAB2">
+                <Component Id="api_ms_win_crt_process_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_crt_process_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-crt-process-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_crt_runtime_l1_1_0.dll" Guid="F906D2BE-DA5F-4A1D-9E9A-26106D9679EF">
+                <Component Id="api_ms_win_crt_runtime_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_crt_runtime_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-crt-runtime-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_crt_stdio_l1_1_0.dll" Guid="EF0D4906-27CE-4586-BDD3-A828244A1498">
+                <Component Id="api_ms_win_crt_stdio_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_crt_stdio_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-crt-stdio-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_crt_string_l1_1_0.dll" Guid="E526CABF-2898-4AA1-AD48-F3A4D814F953">
+                <Component Id="api_ms_win_crt_string_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_crt_string_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-crt-string-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_crt_time_l1_1_0.dll" Guid="6AE05988-8EAE-44B1-8354-1C78E8DA1CDA">
+                <Component Id="api_ms_win_crt_time_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_crt_time_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-crt-time-l1-1-0.dll" />
                 </Component>
-                <Component Id="api_ms_win_crt_utility_l1_1_0.dll" Guid="3C6416D4-3C15-494C-9FC8-BA13E8B03015">
+                <Component Id="api_ms_win_crt_utility_l1_1_0.dll" Guid="PUT-GUID-HERE">
                     <File Id="api_ms_win_crt_utility_l1_1_0.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\api-ms-win-crt-utility-l1-1-0.dll" />
                 </Component>
-                <Component Id="base_library.zip" Guid="0AC3696D-7E81-4615-A9F4-139FD608C8E1">
+                <Component Id="base_library.zip" Guid="PUT-GUID-HERE">
                     <File Id="base_library.zip" KeyPath="yes" Source="$(var.SourceDir)\_internal\base_library.zip" />
                 </Component>
-                <Component Id="libcrypto_3.dll" Guid="EB627631-9B7F-4721-9362-2B20ECE08118">
+                <Component Id="libcrypto_3.dll" Guid="PUT-GUID-HERE">
                     <File Id="libcrypto_3.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\libcrypto-3.dll" />
                 </Component>
-                <Component Id="libffi_8.dll" Guid="AA26EEE9-B75B-4450-89C0-6AE76747970B">
+                <Component Id="libffi_8.dll" Guid="PUT-GUID-HERE">
                     <File Id="libffi_8.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\libffi-8.dll" />
                 </Component>
-                <Component Id="libssl_3.dll" Guid="AD2F08DC-01BD-4ED4-8AC5-F2DC946005BC">
+                <Component Id="libssl_3.dll" Guid="PUT-GUID-HERE">
                     <File Id="libssl_3.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\libssl-3.dll" />
                 </Component>
-                <Component Id="LICENSE" Guid="4A4E0DE9-B01E-4A16-BF22-40D93C9CEC78">
+                <Component Id="LICENSE" Guid="PUT-GUID-HERE">
                     <File Id="LICENSE" KeyPath="yes" Source="$(var.SourceDir)\_internal\LICENSE" />
                 </Component>
-                <Component Id="pyexpat.pyd" Guid="6A0FF5EE-7666-41EC-BD98-FEBD2800C211">
+                <Component Id="LICENSE.txt" Guid="PUT-GUID-HERE">
+                    <File Id="LICENSE.txt" KeyPath="yes" Source="$(var.SourceDir)\_internal\LICENSE.txt" />
+                </Component>
+                <Component Id="pyexpat.pyd" Guid="PUT-GUID-HERE">
                     <File Id="pyexpat.pyd" KeyPath="yes" Source="$(var.SourceDir)\_internal\pyexpat.pyd" />
                 </Component>
-                <Component Id="python3.dll" Guid="A2FE81FD-47F7-41CB-BF96-BDF577780CBB">
+                <Component Id="python3.dll" Guid="PUT-GUID-HERE">
                     <File Id="python3.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\python3.dll" />
                 </Component>
-                <Component Id="python313.dll" Guid="83C133D0-0486-4353-83C0-D2239806158A">
+                <Component Id="python313.dll" Guid="PUT-GUID-HERE">
                     <File Id="python313.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\python313.dll" />
                 </Component>
-                <Component Id="select.pyd" Guid="C50E0E93-5419-4A27-949E-D249F83C30F8">
+                <Component Id="select.pyd" Guid="PUT-GUID-HERE">
                     <File Id="select.pyd" KeyPath="yes" Source="$(var.SourceDir)\_internal\select.pyd" />
                 </Component>
-                <Component Id="THIRD_PARTY_NOTICES.md" Guid="58EEF894-8ADF-4C7D-A9D8-FEC147B20ED6">
+                <Component Id="THIRD_PARTY_NOTICES.md" Guid="PUT-GUID-HERE">
                     <File Id="THIRD_PARTY_NOTICES.md" KeyPath="yes" Source="$(var.SourceDir)\_internal\THIRD_PARTY_NOTICES.md" />
                 </Component>
-                <Component Id="ucrtbase.dll" Guid="7C1B9DBD-0898-4D30-86B4-B56987E776AE">
+                <Component Id="ucrtbase.dll" Guid="PUT-GUID-HERE">
                     <File Id="ucrtbase.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\ucrtbase.dll" />
                 </Component>
-                <Component Id="unicodedata.pyd" Guid="9EB5DF59-8766-4DF2-AE58-6C757B09899A">
+                <Component Id="unicodedata.pyd" Guid="PUT-GUID-HERE">
                     <File Id="unicodedata.pyd" KeyPath="yes" Source="$(var.SourceDir)\_internal\unicodedata.pyd" />
                 </Component>
-                <Component Id="VCRUNTIME140.dll" Guid="BE102971-6B35-4EE7-BB78-FFE2AE8DC341">
+                <Component Id="VCRUNTIME140.dll" Guid="PUT-GUID-HERE">
                     <File Id="VCRUNTIME140.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\VCRUNTIME140.dll" />
                 </Component>
-                <Component Id="VCRUNTIME140_1.dll" Guid="3C094158-4A3C-4482-B9DE-BAD721F91CB6">
+                <Component Id="VCRUNTIME140_1.dll" Guid="PUT-GUID-HERE">
                     <File Id="VCRUNTIME140_1.dll" KeyPath="yes" Source="$(var.SourceDir)\_internal\VCRUNTIME140_1.dll" />
                 </Component>
-                <Component Id="_asyncio.pyd" Guid="A5BFF576-33C7-4706-ACCF-5BFF609CA981">
+                <Component Id="_asyncio.pyd" Guid="PUT-GUID-HERE">
                     <File Id="_asyncio.pyd" KeyPath="yes" Source="$(var.SourceDir)\_internal\_asyncio.pyd" />
                 </Component>
-                <Component Id="_bz2.pyd" Guid="1B00D4D7-AE18-4032-A21E-42B44500E84C">
+                <Component Id="_bz2.pyd" Guid="PUT-GUID-HERE">
                     <File Id="_bz2.pyd" KeyPath="yes" Source="$(var.SourceDir)\_internal\_bz2.pyd" />
                 </Component>
-                <Component Id="_cffi_backend.cp313_win_amd64.pyd" Guid="C5E909C0-237E-410B-BDF5-78193F8725BD">
+                <Component Id="_cffi_backend.cp313_win_amd64.pyd" Guid="PUT-GUID-HERE">
                     <File Id="_cffi_backend.cp313_win_amd64.pyd" KeyPath="yes" Source="$(var.SourceDir)\_internal\_cffi_backend.cp313-win_amd64.pyd" />
                 </Component>
-                <Component Id="_ctypes.pyd" Guid="B6B492AB-81D6-405A-8200-DAA05F620257">
+                <Component Id="_ctypes.pyd" Guid="PUT-GUID-HERE">
                     <File Id="_ctypes.pyd" KeyPath="yes" Source="$(var.SourceDir)\_internal\_ctypes.pyd" />
                 </Component>
-                <Component Id="_decimal.pyd" Guid="92672A3F-AA6F-4376-A2F1-3AA5E398D544">
+                <Component Id="_decimal.pyd" Guid="PUT-GUID-HERE">
                     <File Id="_decimal.pyd" KeyPath="yes" Source="$(var.SourceDir)\_internal\_decimal.pyd" />
                 </Component>
-                <Component Id="_hashlib.pyd" Guid="5A86EF01-CCCF-49ED-BC76-7B470BFBE2EB">
+                <Component Id="_hashlib.pyd" Guid="PUT-GUID-HERE">
                     <File Id="_hashlib.pyd" KeyPath="yes" Source="$(var.SourceDir)\_internal\_hashlib.pyd" />
                 </Component>
-                <Component Id="_lzma.pyd" Guid="069C2879-B36D-4C81-A5B3-E5D84C4F284E">
+                <Component Id="_lzma.pyd" Guid="PUT-GUID-HERE">
                     <File Id="_lzma.pyd" KeyPath="yes" Source="$(var.SourceDir)\_internal\_lzma.pyd" />
                 </Component>
-                <Component Id="_multiprocessing.pyd" Guid="CFB171BD-562C-4998-992D-B8E1486AF071">
+                <Component Id="_multiprocessing.pyd" Guid="PUT-GUID-HERE">
                     <File Id="_multiprocessing.pyd" KeyPath="yes" Source="$(var.SourceDir)\_internal\_multiprocessing.pyd" />
                 </Component>
-                <Component Id="_overlapped.pyd" Guid="F4D323C4-A8E7-42F9-9617-A17051952185">
+                <Component Id="_overlapped.pyd" Guid="PUT-GUID-HERE">
                     <File Id="_overlapped.pyd" KeyPath="yes" Source="$(var.SourceDir)\_internal\_overlapped.pyd" />
                 </Component>
-                <Component Id="_queue.pyd" Guid="44D98E8D-A7A5-4AA5-BDEA-FFCA60F67D7D">
+                <Component Id="_queue.pyd" Guid="PUT-GUID-HERE">
                     <File Id="_queue.pyd" KeyPath="yes" Source="$(var.SourceDir)\_internal\_queue.pyd" />
                 </Component>
-                <Component Id="_socket.pyd" Guid="22A14E24-9888-4924-9A0C-078D77653D20">
+                <Component Id="_socket.pyd" Guid="PUT-GUID-HERE">
                     <File Id="_socket.pyd" KeyPath="yes" Source="$(var.SourceDir)\_internal\_socket.pyd" />
                 </Component>
-                <Component Id="_ssl.pyd" Guid="5C49003A-FBB3-4DBB-A7FF-FC9A93836335">
+                <Component Id="_ssl.pyd" Guid="PUT-GUID-HERE">
                     <File Id="_ssl.pyd" KeyPath="yes" Source="$(var.SourceDir)\_internal\_ssl.pyd" />
                 </Component>
-                <Component Id="_uuid.pyd" Guid="1ABB5B2B-2985-4226-B5D6-3CDD788EFDBA">
+                <Component Id="_uuid.pyd" Guid="PUT-GUID-HERE">
                     <File Id="_uuid.pyd" KeyPath="yes" Source="$(var.SourceDir)\_internal\_uuid.pyd" />
                 </Component>
-                <Component Id="_wmi.pyd" Guid="888FDAEE-6AE3-413F-9F3C-EB4A4DDBC0E9">
+                <Component Id="_wmi.pyd" Guid="PUT-GUID-HERE">
                     <File Id="_wmi.pyd" KeyPath="yes" Source="$(var.SourceDir)\_internal\_wmi.pyd" />
                 </Component>
-                <Directory Id="bcrypt" Name="bcrypt">
-                    <Component Id="_bcrypt.pyd" Guid="628EDE03-8050-424B-BFF8-7E34942D5928">
-                        <File Id="_bcrypt.pyd" KeyPath="yes" Source="$(var.SourceDir)\_internal\bcrypt\_bcrypt.pyd" />
-                    </Component>
-                </Directory>
                 <Directory Id="click_8.4.2.dist_info" Name="click-8.4.2.dist-info">
-                    <Component Id="INSTALLER" Guid="0A66CF94-547D-42A9-8C1F-4C0CE3F50D48">
+                    <Component Id="INSTALLER" Guid="PUT-GUID-HERE">
                         <File Id="INSTALLER" KeyPath="yes" Source="$(var.SourceDir)\_internal\click-8.4.2.dist-info\INSTALLER" />
                     </Component>
-                    <Component Id="METADATA" Guid="40B33BA6-1BD5-4635-A7E3-A3D0A1521AB1">
+                    <Component Id="METADATA" Guid="PUT-GUID-HERE">
                         <File Id="METADATA" KeyPath="yes" Source="$(var.SourceDir)\_internal\click-8.4.2.dist-info\METADATA" />
                     </Component>
-                    <Component Id="RECORD" Guid="F5AEC801-4EBB-4368-AF2E-319A2CE03E64">
+                    <Component Id="RECORD" Guid="PUT-GUID-HERE">
                         <File Id="RECORD" KeyPath="yes" Source="$(var.SourceDir)\_internal\click-8.4.2.dist-info\RECORD" />
                     </Component>
-                    <Component Id="WHEEL" Guid="4776E00E-6AF5-451D-ADC3-0B515435E3AF">
+                    <Component Id="WHEEL" Guid="PUT-GUID-HERE">
                         <File Id="WHEEL" KeyPath="yes" Source="$(var.SourceDir)\_internal\click-8.4.2.dist-info\WHEEL" />
                     </Component>
                     <Directory Id="licenses" Name="licenses">
-                        <Component Id="LICENSE.txt" Guid="3D4FD4CB-559B-4CC7-B29A-AED6662D20B1">
-                            <File Id="LICENSE.txt" KeyPath="yes" Source="$(var.SourceDir)\_internal\click-8.4.2.dist-info\licenses\LICENSE.txt" />
+                        <Component Id="LICENSE.txt_1" Guid="PUT-GUID-HERE">
+                            <File Id="LICENSE.txt_1" KeyPath="yes" Source="$(var.SourceDir)\_internal\click-8.4.2.dist-info\licenses\LICENSE.txt" />
                         </Component>
                     </Directory>
                 </Directory>
                 <Directory Id="cryptography" Name="cryptography">
                     <Directory Id="hazmat" Name="hazmat">
                         <Directory Id="bindings" Name="bindings">
-                            <Component Id="_rust.pyd" Guid="EF1EC3A8-6278-4EEA-A74D-E3D711A38890">
+                            <Component Id="_rust.pyd" Guid="PUT-GUID-HERE">
                                 <File Id="_rust.pyd" KeyPath="yes" Source="$(var.SourceDir)\_internal\cryptography\hazmat\bindings\_rust.pyd" />
                             </Component>
                         </Directory>
                     </Directory>
                 </Directory>
                 <Directory Id="cryptography_46.0.3.dist_info" Name="cryptography-46.0.3.dist-info">
-                    <Component Id="INSTALLER_1" Guid="48EDAA43-5D41-48E1-8B81-EBE9BD2E1CDB">
+                    <Component Id="INSTALLER_1" Guid="PUT-GUID-HERE">
                         <File Id="INSTALLER_1" KeyPath="yes" Source="$(var.SourceDir)\_internal\cryptography-46.0.3.dist-info\INSTALLER" />
                     </Component>
-                    <Component Id="METADATA_1" Guid="DA6CA145-9557-4F94-91EA-B90D76E43AF5">
+                    <Component Id="METADATA_1" Guid="PUT-GUID-HERE">
                         <File Id="METADATA_1" KeyPath="yes" Source="$(var.SourceDir)\_internal\cryptography-46.0.3.dist-info\METADATA" />
                     </Component>
-                    <Component Id="RECORD_1" Guid="2943C9D2-D529-4912-890B-EF47DA1A57F4">
+                    <Component Id="RECORD_1" Guid="PUT-GUID-HERE">
                         <File Id="RECORD_1" KeyPath="yes" Source="$(var.SourceDir)\_internal\cryptography-46.0.3.dist-info\RECORD" />
                     </Component>
-                    <Component Id="WHEEL_1" Guid="A61D5B95-9F8A-40BB-9E30-7805A798E7F4">
+                    <Component Id="WHEEL_1" Guid="PUT-GUID-HERE">
                         <File Id="WHEEL_1" KeyPath="yes" Source="$(var.SourceDir)\_internal\cryptography-46.0.3.dist-info\WHEEL" />
                     </Component>
                     <Directory Id="licenses_1" Name="licenses">
-                        <Component Id="LICENSE_1" Guid="A7A78941-F2F8-486D-9A9D-9A0521EC1ED7">
+                        <Component Id="LICENSE_1" Guid="PUT-GUID-HERE">
                             <File Id="LICENSE_1" KeyPath="yes" Source="$(var.SourceDir)\_internal\cryptography-46.0.3.dist-info\licenses\LICENSE" />
                         </Component>
-                        <Component Id="LICENSE.APACHE" Guid="1AD12AD0-F869-482B-82D1-F3EB6E165DBD">
+                        <Component Id="LICENSE.APACHE" Guid="PUT-GUID-HERE">
                             <File Id="LICENSE.APACHE" KeyPath="yes" Source="$(var.SourceDir)\_internal\cryptography-46.0.3.dist-info\licenses\LICENSE.APACHE" />
                         </Component>
-                        <Component Id="LICENSE.BSD" Guid="8BB98186-1F82-4779-9FD0-85FCFAE2338A">
+                        <Component Id="LICENSE.BSD" Guid="PUT-GUID-HERE">
                             <File Id="LICENSE.BSD" KeyPath="yes" Source="$(var.SourceDir)\_internal\cryptography-46.0.3.dist-info\licenses\LICENSE.BSD" />
                         </Component>
                     </Directory>
                 </Directory>
                 <Directory Id="flask_3.1.2.dist_info" Name="flask-3.1.2.dist-info">
-                    <Component Id="entry_points.txt" Guid="BE9875EB-6048-4EE9-BD83-9DAE472FEE87">
+                    <Component Id="entry_points.txt" Guid="PUT-GUID-HERE">
                         <File Id="entry_points.txt" KeyPath="yes" Source="$(var.SourceDir)\_internal\flask-3.1.2.dist-info\entry_points.txt" />
                     </Component>
-                    <Component Id="INSTALLER_2" Guid="EA57C93A-B3F6-4297-B1BE-AE5D5994CFDC">
+                    <Component Id="INSTALLER_2" Guid="PUT-GUID-HERE">
                         <File Id="INSTALLER_2" KeyPath="yes" Source="$(var.SourceDir)\_internal\flask-3.1.2.dist-info\INSTALLER" />
                     </Component>
-                    <Component Id="METADATA_2" Guid="E37021A5-8D58-4523-A5B7-39853DBB5122">
+                    <Component Id="METADATA_2" Guid="PUT-GUID-HERE">
                         <File Id="METADATA_2" KeyPath="yes" Source="$(var.SourceDir)\_internal\flask-3.1.2.dist-info\METADATA" />
                     </Component>
-                    <Component Id="RECORD_2" Guid="8738F95B-2E55-4910-8BF4-3A2BF0231C81">
+                    <Component Id="RECORD_2" Guid="PUT-GUID-HERE">
                         <File Id="RECORD_2" KeyPath="yes" Source="$(var.SourceDir)\_internal\flask-3.1.2.dist-info\RECORD" />
                     </Component>
-                    <Component Id="REQUESTED" Guid="24157CA6-DD4E-4446-A242-C10D5D537948">
+                    <Component Id="REQUESTED" Guid="PUT-GUID-HERE">
                         <File Id="REQUESTED" KeyPath="yes" Source="$(var.SourceDir)\_internal\flask-3.1.2.dist-info\REQUESTED" />
                     </Component>
-                    <Component Id="WHEEL_2" Guid="3B13D7A6-DF76-4CFA-997E-6444FCE2B3D7">
+                    <Component Id="WHEEL_2" Guid="PUT-GUID-HERE">
                         <File Id="WHEEL_2" KeyPath="yes" Source="$(var.SourceDir)\_internal\flask-3.1.2.dist-info\WHEEL" />
                     </Component>
                     <Directory Id="licenses_2" Name="licenses">
-                        <Component Id="LICENSE.txt_1" Guid="AEC7D945-939B-497E-BB49-2858753E38C7">
-                            <File Id="LICENSE.txt_1" KeyPath="yes" Source="$(var.SourceDir)\_internal\flask-3.1.2.dist-info\licenses\LICENSE.txt" />
+                        <Component Id="LICENSE.txt_2" Guid="PUT-GUID-HERE">
+                            <File Id="LICENSE.txt_2" KeyPath="yes" Source="$(var.SourceDir)\_internal\flask-3.1.2.dist-info\licenses\LICENSE.txt" />
                         </Component>
                     </Directory>
                 </Directory>
                 <Directory Id="importlib_metadata_8.7.1.dist_info" Name="importlib_metadata-8.7.1.dist-info">
-                    <Component Id="INSTALLER_3" Guid="4CF81D63-E836-48E4-A521-D328706ED6C1">
+                    <Component Id="INSTALLER_3" Guid="PUT-GUID-HERE">
                         <File Id="INSTALLER_3" KeyPath="yes" Source="$(var.SourceDir)\_internal\importlib_metadata-8.7.1.dist-info\INSTALLER" />
                     </Component>
-                    <Component Id="METADATA_3" Guid="D17DF559-F5DA-4281-82B1-10ADCBC5AFBB">
+                    <Component Id="METADATA_3" Guid="PUT-GUID-HERE">
                         <File Id="METADATA_3" KeyPath="yes" Source="$(var.SourceDir)\_internal\importlib_metadata-8.7.1.dist-info\METADATA" />
                     </Component>
-                    <Component Id="RECORD_3" Guid="B1D0B859-0424-4722-80E4-37FE31E70281">
+                    <Component Id="RECORD_3" Guid="PUT-GUID-HERE">
                         <File Id="RECORD_3" KeyPath="yes" Source="$(var.SourceDir)\_internal\importlib_metadata-8.7.1.dist-info\RECORD" />
                     </Component>
-                    <Component Id="top_level.txt" Guid="E2554782-A1BA-4FD5-A34A-DC694E466EA1">
+                    <Component Id="top_level.txt" Guid="PUT-GUID-HERE">
                         <File Id="top_level.txt" KeyPath="yes" Source="$(var.SourceDir)\_internal\importlib_metadata-8.7.1.dist-info\top_level.txt" />
                     </Component>
-                    <Component Id="WHEEL_3" Guid="D393A4AA-A544-4DE7-B621-99CB7705D572">
+                    <Component Id="WHEEL_3" Guid="PUT-GUID-HERE">
                         <File Id="WHEEL_3" KeyPath="yes" Source="$(var.SourceDir)\_internal\importlib_metadata-8.7.1.dist-info\WHEEL" />
                     </Component>
                     <Directory Id="licenses_3" Name="licenses">
-                        <Component Id="LICENSE_2" Guid="997AC6D2-FEC4-4C93-92F7-CA00D95DC05D">
+                        <Component Id="LICENSE_2" Guid="PUT-GUID-HERE">
                             <File Id="LICENSE_2" KeyPath="yes" Source="$(var.SourceDir)\_internal\importlib_metadata-8.7.1.dist-info\licenses\LICENSE" />
                         </Component>
                     </Directory>
                 </Directory>
                 <Directory Id="itsdangerous_2.2.0.dist_info" Name="itsdangerous-2.2.0.dist-info">
-                    <Component Id="INSTALLER_4" Guid="19159C57-8E46-4647-9B35-48E84A16DF15">
+                    <Component Id="INSTALLER_4" Guid="PUT-GUID-HERE">
                         <File Id="INSTALLER_4" KeyPath="yes" Source="$(var.SourceDir)\_internal\itsdangerous-2.2.0.dist-info\INSTALLER" />
                     </Component>
-                    <Component Id="LICENSE.txt_2" Guid="6F564339-6E3E-4292-9D8A-3B131F0B80CC">
-                        <File Id="LICENSE.txt_2" KeyPath="yes" Source="$(var.SourceDir)\_internal\itsdangerous-2.2.0.dist-info\LICENSE.txt" />
+                    <Component Id="LICENSE.txt_3" Guid="PUT-GUID-HERE">
+                        <File Id="LICENSE.txt_3" KeyPath="yes" Source="$(var.SourceDir)\_internal\itsdangerous-2.2.0.dist-info\LICENSE.txt" />
                     </Component>
-                    <Component Id="METADATA_4" Guid="F9ACE691-7F88-40DD-A8AF-071E9C9303C5">
+                    <Component Id="METADATA_4" Guid="PUT-GUID-HERE">
                         <File Id="METADATA_4" KeyPath="yes" Source="$(var.SourceDir)\_internal\itsdangerous-2.2.0.dist-info\METADATA" />
                     </Component>
-                    <Component Id="RECORD_4" Guid="9C51FE79-D26B-4830-9049-673C0A233C94">
+                    <Component Id="RECORD_4" Guid="PUT-GUID-HERE">
                         <File Id="RECORD_4" KeyPath="yes" Source="$(var.SourceDir)\_internal\itsdangerous-2.2.0.dist-info\RECORD" />
                     </Component>
-                    <Component Id="WHEEL_4" Guid="AB5E74C1-ECC2-4A6D-8FD8-BD371D26FDB3">
+                    <Component Id="WHEEL_4" Guid="PUT-GUID-HERE">
                         <File Id="WHEEL_4" KeyPath="yes" Source="$(var.SourceDir)\_internal\itsdangerous-2.2.0.dist-info\WHEEL" />
                     </Component>
                 </Directory>
                 <Directory Id="markupsafe" Name="markupsafe">
-                    <Component Id="_speedups.cp313_win_amd64.pyd" Guid="99090D8E-D735-4EA3-A158-E3F949D43DEB">
+                    <Component Id="_speedups.cp313_win_amd64.pyd" Guid="PUT-GUID-HERE">
                         <File Id="_speedups.cp313_win_amd64.pyd" KeyPath="yes" Source="$(var.SourceDir)\_internal\markupsafe\_speedups.cp313-win_amd64.pyd" />
                     </Component>
                 </Directory>
                 <Directory Id="markupsafe_3.0.3.dist_info" Name="markupsafe-3.0.3.dist-info">
-                    <Component Id="INSTALLER_5" Guid="35939EC6-AA91-409B-9583-0A75A1F70E8D">
+                    <Component Id="INSTALLER_5" Guid="PUT-GUID-HERE">
                         <File Id="INSTALLER_5" KeyPath="yes" Source="$(var.SourceDir)\_internal\markupsafe-3.0.3.dist-info\INSTALLER" />
                     </Component>
-                    <Component Id="METADATA_5" Guid="31D5DE4D-C4F4-4FA1-9D38-604CA8340919">
+                    <Component Id="METADATA_5" Guid="PUT-GUID-HERE">
                         <File Id="METADATA_5" KeyPath="yes" Source="$(var.SourceDir)\_internal\markupsafe-3.0.3.dist-info\METADATA" />
                     </Component>
-                    <Component Id="RECORD_5" Guid="9144E697-C30D-4A4B-9640-D6A20EC6EBC0">
+                    <Component Id="RECORD_5" Guid="PUT-GUID-HERE">
                         <File Id="RECORD_5" KeyPath="yes" Source="$(var.SourceDir)\_internal\markupsafe-3.0.3.dist-info\RECORD" />
                     </Component>
-                    <Component Id="top_level.txt_1" Guid="5DB8DCC6-B929-4342-A6A5-F37D656EB866">
+                    <Component Id="top_level.txt_1" Guid="PUT-GUID-HERE">
                         <File Id="top_level.txt_1" KeyPath="yes" Source="$(var.SourceDir)\_internal\markupsafe-3.0.3.dist-info\top_level.txt" />
                     </Component>
-                    <Component Id="WHEEL_5" Guid="411B7CDF-944F-4798-B7B4-F3D9FD419EF1">
+                    <Component Id="WHEEL_5" Guid="PUT-GUID-HERE">
                         <File Id="WHEEL_5" KeyPath="yes" Source="$(var.SourceDir)\_internal\markupsafe-3.0.3.dist-info\WHEEL" />
                     </Component>
                     <Directory Id="licenses_4" Name="licenses">
-                        <Component Id="LICENSE.txt_3" Guid="1A7AE8EE-1680-4AB0-85A2-9EAD9FD47F97">
-                            <File Id="LICENSE.txt_3" KeyPath="yes" Source="$(var.SourceDir)\_internal\markupsafe-3.0.3.dist-info\licenses\LICENSE.txt" />
+                        <Component Id="LICENSE.txt_4" Guid="PUT-GUID-HERE">
+                            <File Id="LICENSE.txt_4" KeyPath="yes" Source="$(var.SourceDir)\_internal\markupsafe-3.0.3.dist-info\licenses\LICENSE.txt" />
                         </Component>
                     </Directory>
                 </Directory>
                 <Directory Id="notices" Name="notices">
-                    <Component Id="THIRD_PARTY_NOTICES.md_1" Guid="E21358C0-162B-4978-9CB3-6AD9C029B3E1">
+                    <Component Id="THIRD_PARTY_NOTICES.md_1" Guid="PUT-GUID-HERE">
                         <File Id="THIRD_PARTY_NOTICES.md_1" KeyPath="yes" Source="$(var.SourceDir)\_internal\notices\THIRD-PARTY-NOTICES.md" />
                     </Component>
                 </Directory>
                 <Directory Id="static" Name="static">
                     <Directory Id="ui" Name="ui">
-                        <Component Id="favicon.svg" Guid="B7C1FDBC-7B66-423D-B176-0A7860FE79F3">
+                        <Component Id="favicon.svg" Guid="PUT-GUID-HERE">
                             <File Id="favicon.svg" KeyPath="yes" Source="$(var.SourceDir)\_internal\static\ui\favicon.svg" />
                         </Component>
-                        <Component Id="index.html" Guid="3536D23D-266A-438E-8E0F-8062213BDE2F">
+                        <Component Id="index.html" Guid="PUT-GUID-HERE">
                             <File Id="index.html" KeyPath="yes" Source="$(var.SourceDir)\_internal\static\ui\index.html" />
                         </Component>
                         <Directory Id="assets" Name="assets">
-                            <Component Id="index_BhY_LeBv.js" Guid="ADD442DB-0775-4749-8DA0-4D6D9BAD2CD6">
+                            <Component Id="index_BhY_LeBv.js" Guid="PUT-GUID-HERE">
                                 <File Id="index_BhY_LeBv.js" KeyPath="yes" Source="$(var.SourceDir)\_internal\static\ui\assets\index-BhY-LeBv.js" />
                             </Component>
-                            <Component Id="index_Tul5SCGi.css" Guid="AF21A5EC-C241-4610-9F8C-E2B2689CF49B">
+                            <Component Id="index_Tul5SCGi.css" Guid="PUT-GUID-HERE">
                                 <File Id="index_Tul5SCGi.css" KeyPath="yes" Source="$(var.SourceDir)\_internal\static\ui\assets\index-Tul5SCGi.css" />
                             </Component>
                         </Directory>
                     </Directory>
                 </Directory>
                 <Directory Id="werkzeug_3.1.3.dist_info" Name="werkzeug-3.1.3.dist-info">
-                    <Component Id="INSTALLER_6" Guid="80D26D70-74D3-4BE3-ACBA-93C6DF1BA87D">
+                    <Component Id="INSTALLER_6" Guid="PUT-GUID-HERE">
                         <File Id="INSTALLER_6" KeyPath="yes" Source="$(var.SourceDir)\_internal\werkzeug-3.1.3.dist-info\INSTALLER" />
                     </Component>
-                    <Component Id="LICENSE.txt_4" Guid="42EF948F-F59E-4824-9471-391554F1D43A">
-                        <File Id="LICENSE.txt_4" KeyPath="yes" Source="$(var.SourceDir)\_internal\werkzeug-3.1.3.dist-info\LICENSE.txt" />
+                    <Component Id="LICENSE.txt_5" Guid="PUT-GUID-HERE">
+                        <File Id="LICENSE.txt_5" KeyPath="yes" Source="$(var.SourceDir)\_internal\werkzeug-3.1.3.dist-info\LICENSE.txt" />
                     </Component>
-                    <Component Id="METADATA_6" Guid="6A103337-596D-4C22-BDDC-C848C7ECA1A1">
+                    <Component Id="METADATA_6" Guid="PUT-GUID-HERE">
                         <File Id="METADATA_6" KeyPath="yes" Source="$(var.SourceDir)\_internal\werkzeug-3.1.3.dist-info\METADATA" />
                     </Component>
-                    <Component Id="RECORD_6" Guid="56BCB01D-5A16-4639-AB61-1ED37B6915AE">
+                    <Component Id="RECORD_6" Guid="PUT-GUID-HERE">
                         <File Id="RECORD_6" KeyPath="yes" Source="$(var.SourceDir)\_internal\werkzeug-3.1.3.dist-info\RECORD" />
                     </Component>
-                    <Component Id="WHEEL_6" Guid="53D97045-F20E-4F55-890D-3253F5C672DA">
+                    <Component Id="WHEEL_6" Guid="PUT-GUID-HERE">
                         <File Id="WHEEL_6" KeyPath="yes" Source="$(var.SourceDir)\_internal\werkzeug-3.1.3.dist-info\WHEEL" />
                     </Component>
                 </Directory>
                 <Directory Id="windows" Name="windows">
-                    <Component Id="BrowserSetup.ps1" Guid="381F465D-88EB-494D-9B59-999374E1CB10">
+                    <Component Id="BrowserSetup.ps1" Guid="PUT-GUID-HERE">
                         <File Id="BrowserSetup.ps1" KeyPath="yes" Source="$(var.SourceDir)\_internal\windows\BrowserSetup.ps1" />
                     </Component>
                 </Directory>
@@ -451,6 +449,7 @@
             <ComponentRef Id="libffi_8.dll" />
             <ComponentRef Id="libssl_3.dll" />
             <ComponentRef Id="LICENSE" />
+            <ComponentRef Id="LICENSE.txt" />
             <ComponentRef Id="pyexpat.pyd" />
             <ComponentRef Id="python3.dll" />
             <ComponentRef Id="python313.dll" />
@@ -474,12 +473,11 @@
             <ComponentRef Id="_ssl.pyd" />
             <ComponentRef Id="_uuid.pyd" />
             <ComponentRef Id="_wmi.pyd" />
-            <ComponentRef Id="_bcrypt.pyd" />
             <ComponentRef Id="INSTALLER" />
             <ComponentRef Id="METADATA" />
             <ComponentRef Id="RECORD" />
             <ComponentRef Id="WHEEL" />
-            <ComponentRef Id="LICENSE.txt" />
+            <ComponentRef Id="LICENSE.txt_1" />
             <ComponentRef Id="_rust.pyd" />
             <ComponentRef Id="INSTALLER_1" />
             <ComponentRef Id="METADATA_1" />
@@ -494,7 +492,7 @@
             <ComponentRef Id="RECORD_2" />
             <ComponentRef Id="REQUESTED" />
             <ComponentRef Id="WHEEL_2" />
-            <ComponentRef Id="LICENSE.txt_1" />
+            <ComponentRef Id="LICENSE.txt_2" />
             <ComponentRef Id="INSTALLER_3" />
             <ComponentRef Id="METADATA_3" />
             <ComponentRef Id="RECORD_3" />
@@ -502,7 +500,7 @@
             <ComponentRef Id="WHEEL_3" />
             <ComponentRef Id="LICENSE_2" />
             <ComponentRef Id="INSTALLER_4" />
-            <ComponentRef Id="LICENSE.txt_2" />
+            <ComponentRef Id="LICENSE.txt_3" />
             <ComponentRef Id="METADATA_4" />
             <ComponentRef Id="RECORD_4" />
             <ComponentRef Id="WHEEL_4" />
@@ -512,14 +510,14 @@
             <ComponentRef Id="RECORD_5" />
             <ComponentRef Id="top_level.txt_1" />
             <ComponentRef Id="WHEEL_5" />
-            <ComponentRef Id="LICENSE.txt_3" />
+            <ComponentRef Id="LICENSE.txt_4" />
             <ComponentRef Id="THIRD_PARTY_NOTICES.md_1" />
             <ComponentRef Id="favicon.svg" />
             <ComponentRef Id="index.html" />
             <ComponentRef Id="index_BhY_LeBv.js" />
             <ComponentRef Id="index_Tul5SCGi.css" />
             <ComponentRef Id="INSTALLER_6" />
-            <ComponentRef Id="LICENSE.txt_4" />
+            <ComponentRef Id="LICENSE.txt_5" />
             <ComponentRef Id="METADATA_6" />
             <ComponentRef Id="RECORD_6" />
             <ComponentRef Id="WHEEL_6" />

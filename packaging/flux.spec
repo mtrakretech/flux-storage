@@ -12,6 +12,7 @@ a = Analysis(
         (str(root / 'static' / 'ui'), 'static/ui'),
         (str(root / 'windows'), 'windows'),
         (str(root / 'LICENSE'), '.'),
+        (str(Path(__import__('sys').base_prefix) / 'LICENSE.txt'), '.'),
         (str(root / 'THIRD_PARTY_NOTICES.md'), '.'),
         (str(root / 'frontend' / 'THIRD-PARTY-NOTICES.md'), 'notices'),
     ],
@@ -19,7 +20,9 @@ a = Analysis(
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
-    excludes=['tkinter'],
+    # bcrypt is present in the build environment but unused by Flux; excluding
+    # it also avoids shipping an irrelevant native extension.
+    excludes=['tkinter', 'bcrypt'],
     noarchive=False,
 )
 pyz = PYZ(a.pure)
